@@ -2,44 +2,40 @@ import { Card, CardContent } from "./ui/Card";
 
 const advisoryMembers = [
   {
+    name: "Sh.\n Vinamra Mishra",
+    title: "Joint Secretary",
+    organization: "Ministry of MSME, GOI",
+  },
+  {
     name: "Dr. Panneerselvam Madanagopal",
     title: "CEO",
     organization: "MeitY Startup Hub, GOI",
   },
   {
-    name: "Sh. Vinamra Mishra",
-    title: "Director",
-    organization: "Ministry of MSME",
+    name: "Rakesh K. Rai",
+    title: "ADC & Joint Secretary",
+    organization: "Ministry of MSME, GOI",
   },
   {
     name: "Ananthanarayana Shanmugam",
-    title: "Senior Vice President",
+    title: "Senior VP & CFO",
     organization: "Invest India",
   },
+
   {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
+    name: "Pankaj Rai",
+    title: "Group Chief Data & Analytics Officer",
+    organization: "Aditya Birla Group",
   },
   {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
+    name: "Aman Gulati",
+    title: "Deputy Director",
+    organization: "CoE Industry 4.0",
   },
   {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
+    name: "Srinivas Dwarakanath",
+    title: "Director General",
+    organization: "Aerospace India Association",
   },
 ];
 
@@ -65,19 +61,19 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
         </p>
       </header>
 
-      <div className="flex flex-col lg:flex-row items-start gap-[34px] relative w-full flex-[0_0_auto]">
+      <div className="flex flex-col lg:flex-row items-start lg:items-end gap-8 relative w-full flex-[0_0_auto]">
         <div className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
           {advisoryMembers.map((member, index) => (
             <Card
               key={index}
-              className="flex flex-col w-full max-w-[214px] items-center justify-center border-0 shadow-none bg-transparent"
+              className="flex flex-col w-full h-full max-w-[214px] border-0 shadow-none bg-transparent"
             >
-              <CardContent className="flex flex-col items-center justify-center gap-4 p-0">
-                <h3 className="text-center text-[#111111] relative mt-[-1.00px] ff-inter font-normal text-2xl tracking-[-1.20px] leading-6">
+              <CardContent className="flex w-full h-full flex-col gap-4  p-0 ">
+                <h3 className=" text-[#111111] relative mt-[-1.00px] ff-inter font-normal text-2xl tracking-[-1.20px] leading-6">
                   {member.name}
                 </h3>
 
-                <div className="text-[#111111] text-center relative ff-inter font-normal text-base tracking-[-0.80px] leading-[22.4px]">
+                <div className="text-[#111111] relative ff-inter font-normal text-base tracking-[-0.80px] leading-[22.4px]">
                   {member.title}
                   <br />
                   {member.organization}
@@ -88,7 +84,7 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
         </div>
 
         <img
-          className="relative w-full max-w-[688px] h-auto opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]"
+          className="relative w-full lg:max-w-[688px] h-auto opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]"
           alt="Strategic Advisory Council Illustration"
           src="https://c.animaapp.com/mk8nxs37jXzmJf/img/frame-73.svg"
         />
