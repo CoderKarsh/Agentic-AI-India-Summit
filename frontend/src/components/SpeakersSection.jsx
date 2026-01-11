@@ -18,7 +18,7 @@ export const SpeakersSection = () => {
           </span>
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-x-8 lg:gap-y-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-x-8 lg:gap-y-12">
           {speakersData.map((speaker, index) => (
             <Card
               key={index}
