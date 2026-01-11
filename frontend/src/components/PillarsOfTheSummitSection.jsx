@@ -39,18 +39,14 @@ export const PillarsOfTheSummitSection = () => {
   return (
     <section className="flex flex-col w-full max-w-[1200px] mx-auto items-start gap-[58px] px-4 py-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
       <header className="flex flex-col w-full items-start gap-6">
-        <h2 className="self-stretch [font-family:'Samarkan-Regular',Helvetica] font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
+        <h2 className="self-stretch font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
           <span className="tracking-[-1.61px]">W</span>
-          <span className="[font-family:'Inria_Serif',Helvetica] tracking-[-1.61px]">
-            hy
-          </span>
+          <span className="ff-inria tracking-[-1.61px]">hy</span>
           <span className="tracking-[-1.61px]"> a</span>
-          <span className="[font-family:'Inria_Serif',Helvetica] tracking-[-1.61px]">
-            ttend?
-          </span>
+          <span className="ff-inria tracking-[-1.61px]">ttend?</span>
         </h2>
 
-        <p className="max-w-[687px] [font-family:'Inter',Helvetica] font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px]">
+        <p className="max-w-[687px] ff-interfont-normal text-neutral-700 text-base tracking-[0] leading-[26.4px]">
           The Agentic AI India Summit is for those wanting to learn from
           decision makers shaping Agentic AI&#39;s future. It engages leaders
           defining policy, deploying AI, and guiding the AI economy. The summit
@@ -60,11 +56,9 @@ export const PillarsOfTheSummitSection = () => {
       </header>
 
       <div className="flex flex-col items-start gap-6 w-full">
-        <h3 className="self-stretch [font-family:'Samarkan-Regular',Helvetica] font-normal text-[#111111] text-[32px] tracking-[-2.24px] leading-8">
+        <h3 className="self-stretch font-samarkan font-normal text-[#111111] text-[32px] tracking-[-2.24px] leading-8">
           <span className="tracking-[-0.72px]">T</span>
-          <span className="[font-family:'Inria_Serif',Helvetica] tracking-[-0.72px]">
-            hemes
-          </span>
+          <span className="ff-inria tracking-[-0.72px]">hemes</span>
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
@@ -81,11 +75,11 @@ export const PillarsOfTheSummitSection = () => {
                   ))}
                 </div>
 
-                <div className="absolute top-5 left-1 [font-family:'Inter',Helvetica] font-bold text-[#ff890b] text-9xl tracking-[0] leading-[211.2px] whitespace-nowrap">
+                <div className="absolute top-5 left-1 ff-interfont-bold text-[#ff890b] text-9xl tracking-[0] leading-[211.2px] whitespace-nowrap">
                   {theme.number}
                 </div>
 
-                <div className="absolute top-[29px] left-[86px] right-4 [font-family:'Inter',Helvetica] font-semibold text-white text-xl tracking-[-0.80px] leading-7">
+                <div className="absolute top-[29px] left-[86px] right-4 ff-interfont-semibold text-white text-xl tracking-[-0.80px] leading-7">
                   {theme.title}
                 </div>
               </CardContent>

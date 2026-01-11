@@ -1,6 +1,7 @@
 import { AboutTheSummitSection } from "../components/AboutTheSummitSection";
 import { CityImpactSection } from "../components/CityImpactSection";
 import { HeroSection } from "../components/HeroSection";
+import { VideoSection } from "../components/VideoSection";
 import { KeyInsightsSection } from "../components/KeyInsightsSection";
 import { PillarsOfTheSummitSection } from "../components/PillarsOfTheSummitSection";
 import { SpeakersSection } from "../components/SpeakersSection";
@@ -14,20 +15,22 @@ const Home = () => {
       <Header />
 
       <main className="w-full space-y-30">
-        <HeroSection />
+        <VideoSection className="px-8 py-8" />
 
-        {/* <div id="home">
-          <CityImpactSection />
-        </div> */}
+        <HeroSection className="px-8 py-8" />
 
-        <KeyInsightsSection />
-        <PillarsOfTheSummitSection />
-        <AboutTheSummitSection />
+        <KeyInsightsSection className="px-8 py-8" />
+
+        <PillarsOfTheSummitSection className="px-8 py-8" />
+
+        <AboutTheSummitSection className="px-8 py-8" />
+
         <div id="speakers">
-          <SpeakersSection />
+          <SpeakersSection className="px-8 py-8" />
         </div>
+
         <div id="committee">
-          <StrategicAdvisoryBoardSection />
+          <StrategicAdvisoryBoardSection className="px-8 py-8" />
         </div>
       </main>
     </div>

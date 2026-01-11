@@ -34,23 +34,15 @@ export const KeyInsightsSection = () => {
 
   return (
     <section className="flex flex-col w-full max-w-[1199px] mx-auto items-start gap-6 px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      <h2 className="relative self-stretch [font-family:'Samarkan-Regular',Helvetica] font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
+      <h2 className="relative self-stretch font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
         <span className="tracking-[-1.61px]">P</span>
-        <span className="[font-family:'Inria_Serif',Helvetica] tracking-[-1.61px]">
-          illars{" "}
-        </span>
+        <span className="ff-inria tracking-[-1.61px]">illars </span>
         <span className="tracking-[-1.61px]">o</span>
-        <span className="[font-family:'Inria_Serif',Helvetica] tracking-[-1.61px]">
-          f&nbsp;&nbsp;
-        </span>
+        <span className="ff-inria tracking-[-1.61px]">f&nbsp;&nbsp;</span>
         <span className="tracking-[-1.61px]">t</span>
-        <span className="[font-family:'Inria_Serif',Helvetica] tracking-[-1.61px]">
-          he{" "}
-        </span>
+        <span className="ff-inria tracking-[-1.61px]">he </span>
         <span className="tracking-[-1.61px]">S</span>
-        <span className="[font-family:'Inria_Serif',Helvetica] tracking-[-1.61px]">
-          ummit
-        </span>
+        <span className="ff-inria tracking-[-1.61px]">ummit</span>
       </h2>
 
       <div className="flex items-center gap-[7px] relative self-stretch w-full">
@@ -65,7 +57,7 @@ export const KeyInsightsSection = () => {
                 src={pillar.icon}
               />
               <div
-                className={`absolute ${pillar.titleClasses} left-0 w-[135px] text-black text-lg text-center tracking-[-1.26px] leading-[25.2px] [font-family:'Inter',Helvetica] font-normal`}
+                className={`absolute ${pillar.titleClasses} left-0 w-[135px] text-black text-lg text-center tracking-[-1.26px] leading-[25.2px] ff-inter font-normal`}
               >
                 {pillar.title}
               </div>
