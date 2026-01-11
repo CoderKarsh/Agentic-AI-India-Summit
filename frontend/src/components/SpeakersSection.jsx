@@ -22,13 +22,13 @@ export const SpeakersSection = () => {
           {speakersData.map((speaker, index) => (
             <Card
               key={index}
-              className="bg-transparent border-none shadow-none translate-y-[-1rem] animate-fade-in opacity-0"
+              className="group bg-transparent border-none shadow-none translate-y-[-1rem] animate-fade-in opacity-0"
               style={{ "--animation-delay": `${(index + 1) * 100}ms` }}
             >
               <CardContent className="p-0 flex flex-col gap-4">
                 <div className="relative w-full aspect-[379/212] bg-white rounded-lg overflow-hidden">
                   <img
-                    className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                    className="absolute inset-0 w-full h-full object-cover rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300"
                     alt={speaker.name}
                     src={speaker.image}
                   />
