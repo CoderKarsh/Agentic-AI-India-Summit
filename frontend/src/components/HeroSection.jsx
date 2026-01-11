@@ -1,47 +1,32 @@
-import React from "react";
-
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
-    <section className="flex flex-col w-full max-w-300 mx-auto items-start gap-4">
-      <header className="flex flex-wrap items-end gap-8 lg:gap-28.75 w-full ">
-        <h1 className="flex items-baseline justify-start flex-1 font-samarkan font-normal text-[#111111] text-4xl md:text-5xl lg:text-[64px]">
-          <span className="tracking-[-2.87px]">A</span>
-          <span className="ff-inria tracking-[-2.87px]">gentic&nbsp;</span>
-          <span className="tracking-[-2.87px]">A</span>
-          <span className="ff-inria tracking-[-2.87px]">I&nbsp;&nbsp;</span>
-          <span className="tracking-[-2.87px]">I</span>
-          <span className="ff-inria tracking-[-2.87px]">ndia&nbsp;summit</span>
-        </h1>
-
-        <p className="flex items-end justify-center ff-inter font-normal text-neutral-700 text-base md:text-lg lg:text-xl text-right tracking-[0] leading-relaxed lg:leading-8.25 whitespace-nowrap">
-          <span className="ff-inter font-normal text-neutral-700 text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25">
-            Defining the Future of&nbsp;
+    <section className="relative w-full py-[25px] px-4 md:px-[118px]">
+      <div className="relative z-10 max-w-[642px] flex flex-col gap-6 translate-y-[-1rem] animate-fade-in opacity-0">
+        <h2 className="[font-family:'Samarkan-Regular',Helvetica] font-normal text-[#111111] text-5xl leading-[48px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+          <span className="tracking-[0]">A</span>
+          <span className="[font-family:'Inria_Serif',Helvetica] tracking-[0]">
+            bout{" "}
           </span>
-          <span className="ff-inria italic">Autonomous Intelligence</span>
+          <span className="tracking-[0]">t</span>
+          <span className="[font-family:'Inria_Serif',Helvetica] tracking-[0]">
+            he summit
+          </span>
+        </h2>
+
+        <p className="[font-family:'Inter',Helvetica] font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+          The Agentic AI India Summit shapes the future of Agentic AI as a
+          driver of the AI economy. It explores the impact of AI evolving into
+          autonomous agents on industries and governance. The summit aligns
+          stakeholders—policy makers, technologists, and industry leaders—on
+          strategies for agent-based architectures and governance.
         </p>
-      </header>
-
-      <div className="relative flex flex-col min-h-100 md:min-h-125 lg:h-168.75 items-end justify-end gap-2.5 px-4 py-5 w-full rounded-[20px] overflow-hidden bg-[#d9d9d9]">
-        {/* video element from public/IntroVideo.mp4; served at root */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/IntroVideo.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          aria-label="Intro video"
-        />
-
-        {/* overlay content (button) sits above the video */}
-        <div className="relative z-10 w-full flex justify-end">
-          <button className="h-auto px-8 py-4 rounded-[120px] bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-90 transition-opacity ff-inter font-medium text-white text-base text-center tracking-[-0.32px] leading-[normal]">
-            Register Now
-          </button>
-        </div>
       </div>
+
+      <img
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        alt="Container"
+        src="https://c.animaapp.com/mk8nxs37jXzmJf/img/container.png"
+      />
     </section>
   );
 };
-
-export { HeroSection };
