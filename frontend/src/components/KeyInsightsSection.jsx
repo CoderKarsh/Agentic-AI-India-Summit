@@ -1,4 +1,4 @@
-export const KeyInsightsSection = () => {
+export const KeyInsightsSection = ({ className = "", ...props }) => {
   const pillars = [
     {
       icon: "https://c.animaapp.com/mk8nxs37jXzmJf/img/openailogo.svg",
@@ -33,7 +33,7 @@ export const KeyInsightsSection = () => {
   ];
 
   return (
-    <section className="flex flex-col w-full max-w-[1199px] mx-auto items-start gap-6 px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+    <section className={`flex flex-col w-full max-w-300 mx-auto items-start gap-6 px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] ${className}`} {...props}>
       <h2 className="relative self-stretch font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
         <span className="tracking-[-1.61px]">P</span>
         <span className="ff-inria tracking-[-1.61px]">illars </span>
@@ -45,8 +45,8 @@ export const KeyInsightsSection = () => {
         <span className="ff-inria tracking-[-1.61px]">ummit</span>
       </h2>
 
-      <div className="flex items-center gap-[7px] relative self-stretch w-full">
-        <div className="relative w-[73.69px] h-[305px] bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]" />
+      <div className="flex flex-wrap items-center justify-center gap-[7px] relative self-stretch w-full">
+        {/* <div className="relative w-[73.69px] h-[305px] bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]" /> */}
 
         {pillars.map((pillar, index) => (
           <div key={index} className="flex items-center gap-[7px]">
@@ -63,7 +63,7 @@ export const KeyInsightsSection = () => {
               </div>
             </div>
 
-            <div className="relative w-[73.69px] h-[305px] bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]" />
+            <div className="relative w-[73.69px] h-45 lg:h-76.25 bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]" />
           </div>
         ))}
       </div>

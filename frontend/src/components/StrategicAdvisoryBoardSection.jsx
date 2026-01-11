@@ -43,9 +43,9 @@ const advisoryMembers = [
   },
 ];
 
-export const StrategicAdvisoryBoardSection = () => {
+export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
   return (
-    <section className="flex flex-col w-full max-w-[1203px] mx-auto items-start gap-8 px-4 py-12 relative opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
+    <section className={`flex flex-col w-full max-w-[1203px] mx-auto items-start gap-8 px-4 py-12 relative opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:200ms] ${className}`} {...props}>
       <header className="inline-flex flex-col items-start gap-4 relative flex-[0_0_auto]">
         <h2 className="relative w-full max-w-[515px] mt-[-1.00px] font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
           <span className="tracking-[-1.61px]">S</span>

@@ -1,12 +1,14 @@
-export const HeroSection = () => {
+export const HeroSection = ({ className = "", ...props }) => {
   return (
-    <section className="relative w-full py-[25px] px-4 md:px-[118px]">
+    <section className={`relative w-full py-[25px] px-4 md:px-[118px] ${className}`} {...props}>
       <div className="relative z-10 max-w-[642px] flex flex-col gap-6 translate-y-[-1rem] animate-fade-in opacity-0">
         <h2 className="font-samarkan font-normal text-[#111111] text-5xl leading-[48px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
           <span className="tracking-[0]">A</span>
           <span className="ff-inria tracking-[0]">bout </span>
           <span className="tracking-[0]">t</span>
-          <span className="ff-inria tracking-[0]">he summit</span>
+          <span className="ff-inria tracking-[0]">he </span>
+          <span className="tracking-[0]">s</span>
+          <span className="ff-inria tracking-[0]">ummit</span>
         </h2>
 
         <p className="ff-inter font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">

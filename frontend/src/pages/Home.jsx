@@ -12,7 +12,7 @@ import Header from "../components/Header";
 const Home = () => {
   return (
     <div className="bg-[#f2f2f2] w-full relative">
-      <Header className="px-8 py-8" />
+      <Header className="px-8" />
 
       <main className="w-full space-y-30">
         <VideoSection className="px-8 py-8" />

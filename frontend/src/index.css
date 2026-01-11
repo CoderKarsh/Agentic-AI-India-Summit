@@ -85,3 +85,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Moving repeating stripes used by the SpeakersSection to reduce DOM nodes and animate efficiently */
+.speakers-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(227, 227, 227, 0.15) 0 4px,
+    transparent 6px 12px
+  );
+  background-size: 12px 100%;
+  animation: stripe-move 1s linear infinite;
+  will-change: background-position;
+  transform: translateZ(0);
+}
+
+@keyframes stripe-move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 12px 0;
+  }
+}

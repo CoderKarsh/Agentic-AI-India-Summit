@@ -8,7 +8,7 @@ const navItems = [
   { label: "Become a sponsor", href: "#sponsor" },
 ];
 
-const Header = () => {
+const Header = ({ className = "", ...props }) => {
   const [open, setOpen] = useState(false);
   const handleNavClick = (e, href) => {
     e.preventDefault();
@@ -21,8 +21,11 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#f2f2f2]/95 backdrop-blur supports-[backdrop-filter]:bg-[#f2f2f2]/80">
-      <nav className="relative flex w-full max-w-300 items-center justify-between mx-auto py-8">
+    <header
+      className={`sticky top-0 z-50 w-full bg-[#f2f2f2]/95 backdrop-blur supports-[backdrop-filter]:bg-[#f2f2f2]/80 ${className}`}
+      {...props}
+    >
+      <nav className="relative flex max-w-300 items-center justify-between mx-auto py-8">
         <a href="#hero">
           <div className="relative flex flex-col items-start justify-center font-samarkan font-normal text-2xl tracking-[-1.68px] leading-6">
             {/* First line: Agentic AI */}
