@@ -22,7 +22,7 @@ const Header = ({ className = "", ...props }) => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-[#f2f2f2]/95 backdrop-blur supports-[backdrop-filter]:bg-[#f2f2f2]/80 ${className}`}
+      className={`sticky top-0 z-50 w-full bg-[#f2f2f2]/95 backdrop-blur supports-backdrop-filter:bg-[#f2f2f2]/80 ${className}`}
       {...props}
     >
       <nav className="relative flex max-w-300 items-center justify-between mx-auto py-8">

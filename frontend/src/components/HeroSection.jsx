@@ -13,7 +13,6 @@ export const HeroSection = ({ className = "", ...props }) => {
           <span className="tracking-[0]">s</span>
           <span className="ff-inria tracking-[0]">ummit</span>
         </h2>
-
         <p className="ff-inter font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
           The Agentic AI India Summit shapes the future of Agentic AI as a
           driver of the AI economy. It explores the impact of AI evolving into
