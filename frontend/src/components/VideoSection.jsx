@@ -2,7 +2,10 @@ import React from "react";
 
 const VideoSection = ({ className = "", ...props }) => {
   return (
-    <section className={`flex flex-col w-full max-w-300 mx-auto items-start gap-4 ${className}`} {...props}>
+    <section
+      className={`flex flex-col w-full max-w-300 mx-auto items-start gap-4 ${className}`}
+      {...props}
+    >
       <header className="flex flex-wrap lg:flex-nowrap items-end gap-8 lg:gap-28.75 w-full ">
         <h1 className="flex items-baseline justify-start flex-1 font-samarkan font-normal text-[#111111] text-4xl md:text-5xl lg:text-[64px]">
           <span className="tracking-[-2.87px]">A</span>
