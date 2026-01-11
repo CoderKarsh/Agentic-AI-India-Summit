@@ -25,6 +25,8 @@ const Home = () => {
 
         <AboutTheSummitSection className="px-8 py-8" />
 
+        <img src="/Pattern.svg" alt="" className="w-full px-5 py-10" />
+
         <div id="speakers">
           <SpeakersSection className="" />
         </div>
