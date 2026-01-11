@@ -12,7 +12,7 @@ import Header from "../components/Header";
 const Home = () => {
   return (
     <div className="bg-[#f2f2f2] w-full relative">
-      <Header />
+      <Header className="px-8" />
 
       <main className="w-full space-y-30">
         <VideoSection className="px-8 py-8" />
@@ -26,7 +26,7 @@ const Home = () => {
         <AboutTheSummitSection className="px-8 py-8" />
 
         <div id="speakers">
-          <SpeakersSection className="px-8 py-8" />
+          <SpeakersSection className="" />
         </div>
 
         <div id="committee">
