@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: Samarkan;
+  src: url("./assets/fonts/Samarkan.TTF");
+}
+:root {
+  --font-samarkan: "Samarkan", serif;
+  --color-primary-red: #e1393e;
+  --color-primary-pink: #e35877;
+  --color-primary-orange: #e88b58;
+  scroll-behavior: smooth;
+}
+
+/* utility class to apply local Samarkan font */
+@layer utilities {
+  .font-samarkan {
+    font-family: var(--font-samarkan);
+  }
+  .ff-inria {
+    font-family: "Inria Serif", serif;
+  }
+  .ff-inter {
+    font-family: "Inter", sans-serif;
+  }
+  .text-primary-red {
+    color: var(--color-primary-red);
+  }
+  .text-primary-pink {
+    color: var(--color-primary-pink);
+  }
+  .text-primary-orange {
+    color: var(--color-primary-orange);
+  }
+  /* background and border utilities */
+  .bg-primary-red {
+    background-color: var(--color-primary-red);
+  }
+  .bg-primary-pink {
+    background-color: var(--color-primary-pink);
+  }
+  .bg-primary-orange {
+    background-color: var(--color-primary-orange);
+  }
+  .border-primary-red {
+    border-color: var(--color-primary-red);
+  }
+  .border-primary-pink {
+    border-color: var(--color-primary-pink);
+  }
+  .border-primary-orange {
+    border-color: var(--color-primary-orange);
+  }
+}
+
+:root {
+  line-height: 1.65;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #111111;
+  background-color: #f2f2f2;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
