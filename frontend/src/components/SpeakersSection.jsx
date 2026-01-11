@@ -1,103 +1,5 @@
 import { Card, CardContent } from "./ui/Card";
-
-const speakersData = [
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331.png",
-  },
-  {
-    name: "Pankaj Rai",
-    title: "Group Chief Data and Analytics Officer",
-    organization: "Aditya Birla Group",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-1.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Sh. Vinamra Mishra",
-    title: "Director",
-    organization: "Ministry of Micro, Small and Medium Enterprises",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-2.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-2.png",
-  },
-  {
-    name: "Ananthanarayanan Shanmugam",
-    title: "Senior Vice President",
-    organization: "Invest India",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-3.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-3.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-4.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-5.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-6.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-7.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-8.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-9.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-10.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-  {
-    name: "Dr. Panneerselvam Madanagopal",
-    title: "CEO",
-    organization: "MeitY Startup Hub, GOI",
-    backgroundImage:
-      "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-330-11.png",
-    image: "https://c.animaapp.com/mk8nxs37jXzmJf/img/rectangle-331-11.png",
-  },
-];
+import { speakersData } from "../data/speakersData";
 
 const backgroundStripes = Array.from({ length: 100 }, (_, i) => i);
 
@@ -114,9 +16,9 @@ export const SpeakersSection = () => {
       </div>
 
       <div className="relative max-w-[1201px] mx-auto px-4">
-        <h2 className="mb-8 font-samarkan font-normal text-5xl tracking-[-3.36px] leading-[48px] translate-y-[-1rem] animate-fade-in opacity-0">
+        <h2 className="mb-8 [font-family:'Samarkan-Regular',Helvetica] font-normal text-5xl tracking-[-3.36px] leading-[48px] translate-y-[-1rem] animate-fade-in opacity-0">
           <span className="text-white tracking-[-1.61px]">s</span>
-          <span className="ff-inria text-white tracking-[-1.61px]">
+          <span className="[font-family:'Inria_Serif',Helvetica] text-white tracking-[-1.61px]">
             peakers
           </span>
         </h2>
@@ -129,7 +31,19 @@ export const SpeakersSection = () => {
               style={{ "--animation-delay": `${(index + 1) * 100}ms` }}
             >
               <CardContent className="p-0 flex flex-col gap-4">
-                <div className="relative w-full aspect-[379/212] bg-white overflow-hidden rounded-lg">
+                <div className="relative w-full aspect-[379/212]">
+                
+                  {index === 0 && (
+                    <div className="absolute inset-0 flex items-center gap-8 p-[3px]">
+                      {[...Array(4)].map((_, i) => (
+                        <div
+                          key={i}
+                          className="relative flex-1 h-full bg-[#e1393e33]"
+                        />
+                      ))}
+                    </div>
+                  )}
+
                   <img
                     className="absolute inset-0 w-full h-full object-cover rounded-lg"
                     alt={speaker.name}
@@ -138,10 +52,10 @@ export const SpeakersSection = () => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <h3 className="ff-inter font-normal text-white text-2xl tracking-[-1.20px] leading-6">
+                  <h3 className="[font-family:'Inter',Helvetica] font-normal text-white text-2xl tracking-[-1.20px] leading-6">
                     {speaker.name}
                   </h3>
-                  <p className="ff-inter font-normal text-white text-base tracking-[-0.80px] leading-[22.4px]">
+                  <p className="[font-family:'Inter',Helvetica] font-normal text-white text-base tracking-[-0.80px] leading-[22.4px]">
                     {speaker.title}
                     <br />
                     {speaker.organization}
