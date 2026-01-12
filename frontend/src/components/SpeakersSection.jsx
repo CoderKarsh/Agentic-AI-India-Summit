@@ -26,7 +26,7 @@ export const SpeakersSection = () => {
               style={{ "--animation-delay": `${(index + 1) * 100}ms` }}
             >
               <CardContent className="p-0 flex flex-col gap-4">
-                <div className="relative w-full aspect-[379/212] bg-white rounded-lg overflow-hidden">
+                <div className="relative w-full aspect-[1/1] bg-white rounded-lg overflow-hidden">
                   <img
                     className="absolute inset-0 w-full h-full object-cover rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300"
                     alt={speaker.name}

@@ -1,7 +1,13 @@
 const attendeeTypes = [
   {
-    text: "Enterprise CXOs and Business Decision Makers",
+    text: "Enterprise CXOs",
     bgColor: "bg-[#e35877]",
+    rounded: "rounded-[140px]",
+    animationDelay: "200ms",
+  },
+  {
+    text: "Business Decision Makers",
+    bgColor: "bg-[#e1393e]",
     rounded: "rounded-[140px]",
     animationDelay: "200ms",
   },
