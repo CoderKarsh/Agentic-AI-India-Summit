@@ -37,30 +37,24 @@ const Header = ({ className = "", ...props }) => {
     >
       <nav className="relative flex max-w-300 items-center justify-between mx-auto py-4">
         <a href="#home">
-          <div className="relative flex flex-col items-start justify-center font-samarkan font-normal text-2xl tracking-[-1.68px] leading-6">
+          <div className="relative flex flex-col gap-1.5 items-start justify-center font-samarkan font-normal text-2xl tracking-[-1.68px] leading-6">
             {/* First line: Agentic AI */}
-            <div className="flex items-baseline">
+            <div className="flex items-baseline text-[44px]">
               <span className="text-primary-pink tracking-[-0.40px] leading-[21.8px]">
                 A
               </span>
               <span className="ff-inria text-[#111111] tracking-[-0.40px] leading-[21.8px]">
-                gentic&nbsp;
+                g&nbsp;
               </span>
               <span className="text-primary-orange tracking-[-0.40px] leading-[21.8px]">
                 A
               </span>
-              <span className="ff-inria text-[#111111] tracking-[-0.40px] leading-[21.8px]">
-                I
+              <span className="text-primary-red tracking-[-0.40px] leading-[21.8px]">
+                I&nbsp;
               </span>
             </div>
             {/* Second line: India Summit */}
             <div className="flex items-baseline">
-              <span className="text-primary-red tracking-[-0.40px] leading-[21.8px]">
-                I
-              </span>
-              <span className="ff-inria text-[#111111] tracking-[-0.40px] leading-[21.8px]">
-                ndia&nbsp;
-              </span>
               <span className="ff-inria text-primary-orange tracking-[-0.40px] leading-[21.8px]">
                 s
               </span>

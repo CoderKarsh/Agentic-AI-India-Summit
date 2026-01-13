@@ -1,4 +1,5 @@
 import { Card, CardContent } from "./ui/Card";
+import { motion } from "framer-motion";
 
 const advisoryMembers = [
   {
@@ -40,10 +41,28 @@ const advisoryMembers = [
 ];
 
 export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
+  const gridContainer = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.12 } },
+  };
+
+  const cardItem = {
+    hidden: { opacity: 0, y: 12 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+  };
+
+  const reveal = {
+    hidden: { y: "100%" },
+    show: { y: "0%", transition: { duration: 0.42, ease: "easeOut" } },
+  };
+
   return (
-    <section
+    <motion.section
       className={`flex flex-col w-full max-w-[1203px] mx-auto items-start gap-8 px-4 py-12 relative ${className}`}
-      {...props}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <header className="inline-flex flex-col items-start gap-4 relative flex-[0_0_auto]">
         <h2 className="relative w-full max-w-[515px] mt-[-1.00px] font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
@@ -62,26 +81,37 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
       </header>
 
       <div className="flex flex-col lg:flex-row items-start lg:items-end gap-8 relative w-full flex-[0_0_auto]">
-        <div className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative">
+        <motion.div
+          className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative"
+          variants={gridContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {advisoryMembers.map((member, index) => (
-            <Card
-              key={index}
-              className="flex flex-col w-full h-full max-w-[214px] border-0 shadow-none bg-transparent"
-            >
-              <CardContent className="flex w-full h-full flex-col gap-4  p-0 ">
-                <h3 className=" text-[#111111] relative mt-[-1.00px] ff-inter font-normal text-2xl tracking-[-1.20px] leading-6">
-                  {member.name}
-                </h3>
+            <motion.div key={index} variants={cardItem}>
+              <Card className="flex flex-col w-full h-full max-w-[214px] border-0 shadow-none bg-transparent">
+                <CardContent className="flex w-full h-full flex-col gap-4  p-0 ">
+                  <motion.h3 className="text-[#111111] relative mt-[-1.00px] ff-inter font-normal text-2xl tracking-[-1.20px] leading-6 overflow-hidden">
+                    <motion.span className="inline-block" variants={reveal}>
+                      {member.name}
+                    </motion.span>
+                  </motion.h3>
 
-                <div className="text-[#111111] relative ff-inter font-normal text-base tracking-[-0.80px] leading-[22.4px]">
-                  {member.title}
-                  <br />
-                  {member.organization}
-                </div>
-              </CardContent>
-            </Card>
+                  <motion.div className="text-[#111111] relative ff-inter font-normal text-base tracking-[-0.80px] leading-[22.4px] overflow-hidden">
+                    <motion.span className="inline-block" variants={reveal}>
+                      {member.title}
+                    </motion.span>
+                    <br />
+                    <motion.span className="inline-block" variants={reveal}>
+                      {member.organization}
+                    </motion.span>
+                  </motion.div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <img
           className="relative w-full lg:max-w-[688px] h-auto"
@@ -89,6 +119,6 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
           src="https://c.animaapp.com/mk8nxs37jXzmJf/img/frame-73.svg"
         />
       </div>
-    </section>
+    </motion.section>
   );
 };

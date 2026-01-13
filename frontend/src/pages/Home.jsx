@@ -6,6 +6,7 @@ import { PillarsOfTheSummitSection } from "../components/PillarsOfTheSummitSecti
 import { SpeakersSection } from "../components/SpeakersSection";
 import { StrategicAdvisoryBoardSection } from "../components/StrategicAdvisoryBoardSection";
 import { FutureSystemsCouncil } from "../components/FutureSystemsCouncil";
+import { motion } from "framer-motion";
 import Header from "../components/Header";
 
 const Home = () => {
@@ -15,14 +16,28 @@ const Home = () => {
 
       <main className="w-full space-y-30">
         <VideoSection className="px-8 py-8" />
-        <HeroSection className="px-8 py-8" />
+        <motion.div
+          className=" bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        >
+          <HeroSection className="px-8 py-8" />
+        </motion.div>
         <KeyInsightsSection className="px-8 py-8" />
         <PillarsOfTheSummitSection className="px-8 py-8" />
         <AboutTheSummitSection className="px-8 py-8" />
 
-        <div className="overflow-hidden w-full px-8">
+        <motion.div
+          className="overflow-hidden w-full px-8"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <img src="/Pattern.svg" alt="" className="w-[1400px] max-w-none" />
-        </div>
+        </motion.div>
 
         <div id="speakers">
           <SpeakersSection className="" />

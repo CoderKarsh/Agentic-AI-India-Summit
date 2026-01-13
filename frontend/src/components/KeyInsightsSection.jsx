@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const KeyInsightsSection = ({ className = "", ...props }) => {
   const pillars = [
     {
@@ -33,9 +35,13 @@ export const KeyInsightsSection = ({ className = "", ...props }) => {
   ];
 
   return (
-    <section
+    <motion.section
       className={`flex flex-col w-full max-w-316 mx-auto items-start gap-6 px-4 ${className}`}
       {...props}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <h2 className="relative self-stretch font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
         <span className="tracking-[-1.61px]">P</span>
@@ -70,6 +76,6 @@ export const KeyInsightsSection = ({ className = "", ...props }) => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
