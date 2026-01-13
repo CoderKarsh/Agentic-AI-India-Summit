@@ -10,6 +10,14 @@ const navItems = [
 
 const Header = ({ className = "", ...props }) => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const handleNavClick = (e, href) => {
     e.preventDefault();
     const targetId = href.replace("#", "");
@@ -22,11 +30,11 @@ const Header = ({ className = "", ...props }) => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-[#f2f2f2]/95 backdrop-blur supports-backdrop-filter:bg-[#f2f2f2]/80 ${className}`}
+      className={`sticky top-0 z-50 w-full bg-[#f2f2f2] ${className} transition-shadow duration-200 ${scrolled ? 'shadow-[0_2px_8px_rgba(0,0,0,0.08)]' : 'shadow-none'}`}
       {...props}
     >
-      <nav className="relative flex max-w-300 items-center justify-between mx-auto py-8">
-        <a href="#hero">
+      <nav className="relative flex max-w-300 items-center justify-between mx-auto py-4">
+        <a href="#home">
           <div className="relative flex flex-col items-start justify-center font-samarkan font-normal text-2xl tracking-[-1.68px] leading-6">
             {/* First line: Agentic AI */}
             <div className="flex items-baseline">
