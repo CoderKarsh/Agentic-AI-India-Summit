@@ -47,7 +47,7 @@ const councilMembers = [
 export const FutureSystemsCouncil = ({ className = "", ...props }) => {
   return (
     <section
-      className={`flex flex-col w-full max-w-[1203px] mx-auto items-start gap-8 px-4 py-12 relative opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:200ms] ${className}`}
+      className={`flex flex-col w-full max-w-[1203px] mx-auto items-start gap-8 px-4 py-12 relative ${className}`}
       {...props}
     >
       <header className="inline-flex flex-col items-start gap-4 relative flex-[0_0_auto]">
@@ -68,11 +68,11 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
 
       <div className="flex flex-col lg:flex-row items-start lg:items-end gap-8 relative w-full flex-[0_0_auto]">
         <img
-          className="relative w-full lg:max-w-[688px] h-auto opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]"
+          className="relative w-full lg:max-w-[688px] h-auto"
           alt="Strategic Advisory Council Illustration"
           src="https://c.animaapp.com/mk8nxs37jXzmJf/img/frame-73.svg"
         />
-        <div className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
+        <div className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative">
           {councilMembers.map((member, index) => (
             <Card
               key={index}

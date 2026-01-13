@@ -15,16 +15,10 @@ const Home = () => {
       <Header className="px-8" />
 
       <main className="w-full space-y-30">
-        <div id="about">
-          <VideoSection className="px-8 py-8" />
-        </div>
-
+        <VideoSection className="px-8 py-8" />
         <HeroSection className="px-8 py-8" />
-
         <KeyInsightsSection className="px-8 py-8" />
-
         <PillarsOfTheSummitSection className="px-8 py-8" />
-
         <AboutTheSummitSection className="px-8 py-8" />
 
         <div className="overflow-hidden w-full px-8">

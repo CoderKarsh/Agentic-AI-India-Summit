@@ -38,7 +38,7 @@ const themesData = [
 export const PillarsOfTheSummitSection = ({ className = "", ...props }) => {
   return (
     <section
-      className={`flex flex-col w-full max-w-300 mx-auto items-start gap-[58px] px-4 py-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] ${className}`}
+      className={`flex flex-col w-full max-w-316 mx-auto items-start gap-[58px] px-4 py-8 ${className}`}
       {...props}
     >
       <header className="flex flex-col w-full items-start gap-6">
@@ -68,7 +68,7 @@ export const PillarsOfTheSummitSection = ({ className = "", ...props }) => {
           {themesData.map((theme, index) => (
             <Card
               key={index}
-              className="h-[156px] bg-[#e35877] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0 translate-y-[-1rem] animate-fade-in opacity-0"
+              className="h-[156px] bg-[#e35877] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0"
               style={{ "--animation-delay": `${400 + index * 100}ms` }}
             >
               <CardContent className="relative w-full h-full p-0">

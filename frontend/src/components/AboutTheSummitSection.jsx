@@ -52,7 +52,7 @@ const attendeeTypes = [
 export const AboutTheSummitSection = ({ className = "", ...props }) => {
   return (
     <section
-      className={`flex flex-col w-full max-w-300 mx-auto items-center gap-[65px] px-4 py-8 opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:0ms] ${className}`}
+      className={`flex flex-col w-full max-w-316 mx-auto items-center gap-[65px] px-4 py-8 ${className}`}
       {...props}
     >
       <h2 className="relative self-stretch font-samarkan font-normal text-transparent text-5xl text-center tracking-[-3.36px] leading-[48px]">
@@ -68,11 +68,11 @@ export const AboutTheSummitSection = ({ className = "", ...props }) => {
         </span>
       </h2>
 
-      <div className="relative flex flex-wrap -mr-12 w-full max-w-300 min-h-49.5">
+      <div className="relative flex flex-wrap -mr-12 w-full max-w-316 min-h-49.5">
         {attendeeTypes.map((attendee, index) => (
           <div
             key={index}
-            className={` px-10 py-5  ${attendee.bgColor} -ml-12 rounded-[140px] shadow-[inset_0px_4px_4px_#0000001a] text-white text-sm lg:text-xl text-right tracking-[0] leading-[normal] whitespace-nowrap ff-inter font-normal opacity-0 animate-fade-in`}
+            className={` px-10 py-5  ${attendee.bgColor} -ml-12 rounded-[140px] shadow-[inset_0px_4px_4px_#0000001a] text-white text-sm lg:text-xl text-right tracking-[0] leading-[normal] whitespace-nowrap ff-inter font-normal`}
           >
             {attendee.text}&nbsp;&nbsp;&nbsp;&nbsp;
           </div>

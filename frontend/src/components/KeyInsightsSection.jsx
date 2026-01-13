@@ -34,7 +34,7 @@ export const KeyInsightsSection = ({ className = "", ...props }) => {
 
   return (
     <section
-      className={`flex flex-col w-full max-w-300 mx-auto items-start gap-6 px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] ${className}`}
+      className={`flex flex-col w-full max-w-316 mx-auto items-start gap-6 px-4 ${className}`}
       {...props}
     >
       <h2 className="relative self-stretch font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">

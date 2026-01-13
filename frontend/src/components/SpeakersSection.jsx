@@ -10,8 +10,8 @@ export const SpeakersSection = () => {
         aria-hidden="true"
       />
 
-      <div className="relative max-w-300 mx-auto px-4">
-        <h2 className="mb-8 font-samarkan font-normal text-5xl tracking-[-3.36px] leading-[48px] translate-y-[-1rem] animate-fade-in opacity-0">
+      <div className="relative max-w-316 mx-auto px-4">
+        <h2 className="mb-8 font-samarkan font-normal text-5xl tracking-[-3.36px] leading-[48px]">
           <span className="text-white tracking-[-1.61px]">s</span>
           <span className="ff-inria text-white tracking-[-1.61px]">
             peakers
@@ -22,11 +22,11 @@ export const SpeakersSection = () => {
           {speakersData.map((speaker, index) => (
             <Card
               key={index}
-              className="group bg-transparent border-none shadow-none translate-y-[-1rem] animate-fade-in opacity-0"
+              className="group bg-transparent border-none shadow-none"
               style={{ "--animation-delay": `${(index + 1) * 100}ms` }}
             >
               <CardContent className="p-0 flex flex-col gap-4">
-                <div className="relative w-full aspect-[1/1] bg-white rounded-lg overflow-hidden">
+                <div className="relative w-full aspect-square bg-white rounded-lg overflow-hidden">
                   <img
                     className="absolute inset-0 w-full h-full object-cover rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300"
                     alt={speaker.name}
