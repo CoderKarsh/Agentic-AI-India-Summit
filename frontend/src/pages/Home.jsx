@@ -1,5 +1,4 @@
 import { AboutTheSummitSection } from "../components/AboutTheSummitSection";
-import { CityImpactSection } from "../components/CityImpactSection";
 import { HeroSection } from "../components/HeroSection";
 import { VideoSection } from "../components/VideoSection";
 import { KeyInsightsSection } from "../components/KeyInsightsSection";
