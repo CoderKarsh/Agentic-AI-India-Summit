@@ -1,5 +1,8 @@
 import { Card, CardContent } from "./ui/Card";
 import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
+
+import collage from "../assets/councilCollages/Future Systems Council.svg";
 
 const councilMembers = [
   {
@@ -60,9 +63,57 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
     hidden: { y: "100%" },
     show: { y: "0%", transition: { duration: 0.42, ease: "easeOut" } },
   };
+
+  const leftRef = useRef(null);
+  const collageRef = useRef(null);
+
+  useEffect(() => {
+    const syncHeights = () => {
+      if (typeof window === "undefined") return;
+      if (!leftRef.current || !collageRef.current) return;
+      // only enforce at large screens (lg ~= 1024px)
+      if (window.innerWidth < 1024) {
+        collageRef.current.style.height = "";
+        collageRef.current.style.minHeight = "280px";
+        return;
+      }
+      const leftHeight = Math.ceil(
+        leftRef.current.getBoundingClientRect().height
+      );
+      // set explicit height to match exactly
+      collageRef.current.style.minHeight = "";
+      collageRef.current.style.height = `${Math.max(leftHeight, 280)}px`;
+    };
+
+    // initial sync and delayed sync (fonts/images/animations may change layout)
+    syncHeights();
+    const t = setTimeout(syncHeights, 120);
+
+    // observe left column size changes
+    let ro = null;
+    if (typeof ResizeObserver !== "undefined" && leftRef.current) {
+      ro = new ResizeObserver(() => syncHeights());
+      ro.observe(leftRef.current);
+    }
+
+    // also re-sync when the collage image loads (in case it affects layout)
+    const imgEl = collageRef.current?.querySelector("img");
+    const onImgLoad = () => syncHeights();
+    if (imgEl) imgEl.addEventListener("load", onImgLoad);
+
+    window.addEventListener("resize", syncHeights);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", syncHeights);
+      if (ro) ro.disconnect();
+      if (imgEl) imgEl.removeEventListener("load", onImgLoad);
+    };
+  }, []);
+
   return (
     <motion.section
       className={`flex flex-col w-full max-w-[1203px] mx-auto items-start gap-8 px-4 py-12 relative ${className}`}
+      {...props}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -84,13 +135,19 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
         </p>
       </header>
 
-      <div className="flex flex-col lg:flex-row items-start lg:items-end gap-8 relative w-full flex-[0_0_auto]">
-        <img
-          className="relative w-full lg:max-w-[688px] h-auto"
-          alt="Strategic Advisory Council Illustration"
-          src="https://c.animaapp.com/mk8nxs37jXzmJf/img/frame-73.svg"
-        />
+      <div className="flex flex-col gap-8 relative w-full flex-[0_0_auto] lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-8">
+        <div
+          ref={collageRef}
+          className="bg-[rgb(217,217,217)] rounded-2xl overflow-hidden relative w-full lg:max-w-[688px] flex flex-col items-end justify-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
+        >
+          <img
+            src={collage}
+            alt="Future Systems Council"
+            className="w-full h-auto object-contain"
+          />
+        </div>
         <motion.div
+          ref={leftRef}
           className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative"
           variants={gridContainer}
           initial="hidden"
