@@ -3,6 +3,7 @@ import React from "react";
 const VideoSection = ({ className = "", ...props }) => {
   return (
     <section
+      id="home"
       className={`flex flex-col w-full max-w-300 mx-auto items-start gap-4 ${className}`}
       {...props}
     >
