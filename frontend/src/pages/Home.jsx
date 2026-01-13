@@ -15,7 +15,9 @@ const Home = () => {
       <Header className="px-8" />
 
       <main className="w-full space-y-30">
-        <div id="about"><VideoSection className="px-8 py-8" /></div>
+        <div id="about">
+          <VideoSection className="px-8 py-8" />
+        </div>
 
         <HeroSection className="px-8 py-8" />
 
@@ -25,8 +27,8 @@ const Home = () => {
 
         <AboutTheSummitSection className="px-8 py-8" />
 
-        <div className="overflow-hidden w-[1400px] mx-16">
-            <img src="/Pattern.svg" alt="" className="w-full" />
+        <div className="overflow-hidden w-full px-8">
+          <img src="/Pattern.svg" alt="" className="w-[1400px] max-w-none" />
         </div>
 
         <div id="speakers">
