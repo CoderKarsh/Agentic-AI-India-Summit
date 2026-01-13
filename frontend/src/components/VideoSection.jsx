@@ -5,10 +5,10 @@ const VideoSection = ({ className = "", ...props }) => {
   return (
     <section
       id="home"
-      className={`flex flex-col w-full max-w-316 mx-auto items-start gap-4 ${className}`}
+      className={`flex flex-col w-full max-w-316 mx-auto items-start gap-4 py-8 ${className}`}
       {...props}
     >
-      <section className="flex flex-wrap lg:flex-nowrap items-end gap-8 lg:gap-28.75 w-full ">
+      <section className="flex flex-wrap lg:flex-nowrap items-end gap-8 px-8 lg:gap-28.75 w-full ">
         <motion.h1
           className="flex items-baseline justify-start flex-wrap font-samarkan font-normal text-[#111111] text-[64px] md:text-8xl leading-none"
           initial="hidden"
@@ -149,7 +149,7 @@ const VideoSection = ({ className = "", ...props }) => {
           </motion.div>
         </motion.h1>
       </section>
-      <motion.div className="overflow-hidden w-full">
+      <motion.div className="overflow-hidden w-full px-8">
         <motion.p
           className="flex flex-wrap xl:flex-nowrap items-end justify-start ff-inter font-normal text-neutral-700 text-base md:text-lg lg:text- tracking-[0] leading-relaxed lg:leading-8.25 whitespace-nowrap m-0"
           initial={{ x: -420 }}
@@ -164,7 +164,7 @@ const VideoSection = ({ className = "", ...props }) => {
         </motion.p>
       </motion.div>
 
-      <div className="relative flex flex-col items-end justify-end gap-2.5 px-4 py-5 w-full rounded-[20px] overflow-hidden aspect-video">
+      <div className="relative flex flex-col items-end justify-end gap-2.5 md:mx-4 py-5 w-full md:rounded-[20px] overflow-hidden aspect-video">
         {/* video element from public/IntroVideo.mp4; served at root */}
         <motion.video
           className="absolute inset-0 w-full h-full object-cover"

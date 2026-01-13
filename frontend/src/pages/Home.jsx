@@ -15,7 +15,7 @@ const Home = () => {
       <Header className="px-8" />
 
       <main className="w-full space-y-30">
-        <VideoSection className="px-8 py-8" />
+        <VideoSection />
         <motion.div
           className=" bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]"
           initial={{ opacity: 0 }}
