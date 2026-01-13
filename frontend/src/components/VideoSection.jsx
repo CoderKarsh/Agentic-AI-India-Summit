@@ -24,7 +24,7 @@ const VideoSection = ({ className = "", ...props }) => {
         </p>
       </header>
 
-      <div className="relative flex flex-col min-h-100 md:min-h-125 lg:h-168.75 items-end justify-end gap-2.5 px-4 py-5 w-full rounded-[20px] overflow-hidden bg-[#d9d9d9]">
+      <div className="relative flex flex-col min-h-100 md:min-h-125 lg:h-168.75 items-end justify-end gap-2.5 px-4 py-5 w-full rounded-[20px] overflow-hidden bg-[#d9d9d9] aspect-[16/9]">
         {/* video element from public/IntroVideo.mp4; served at root */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
