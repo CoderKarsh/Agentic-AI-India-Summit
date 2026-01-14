@@ -84,7 +84,7 @@ const Header = ({ className = "", ...props }) => {
                       handleNavClick(e, item.href.replace("/", ""));
                       setOpen(false);
                     }}
-                    className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer"
+                    className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer gradient-underline"
                   >
                     {item.label}
                   </a>
@@ -97,7 +97,7 @@ const Header = ({ className = "", ...props }) => {
                   key={item.label}
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer"
+                  className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer gradient-underline"
                 >
                   {item.label}
                 </Link>
@@ -110,7 +110,7 @@ const Header = ({ className = "", ...props }) => {
                 key={item.label}
                 to={item.href}
                 onClick={() => setOpen(false)}
-                className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red"
+                className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red gradient-underline"
               >
                 {item.label}
               </Link>
@@ -168,7 +168,7 @@ const Header = ({ className = "", ...props }) => {
                           handleNavClick(e, item.href.replace("/", ""));
                           setOpen(false);
                         }}
-                        className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100"
+                        className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100 gradient-underline"
                       >
                         {item.label}
                       </a>
@@ -180,7 +180,7 @@ const Header = ({ className = "", ...props }) => {
                       key={item.label}
                       to={item.href}
                       onClick={() => setOpen(false)}
-                      className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100"
+                      className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100 gradient-underline"
                     >
                       {item.label}
                     </Link>
@@ -192,7 +192,7 @@ const Header = ({ className = "", ...props }) => {
                     key={item.label}
                     to={item.href}
                     onClick={() => setOpen(false)}
-                    className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100"
+                    className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100 gradient-underline"
                   >
                     {item.label}
                   </Link>

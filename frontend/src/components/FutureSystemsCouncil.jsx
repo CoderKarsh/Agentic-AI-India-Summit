@@ -1,6 +1,14 @@
 import { Card, CardContent } from "./ui/Card";
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import harnath from "../assets/speakerPhotos/harnath babu.svg";
+import parna from "../assets/speakerPhotos/parna ghosh.svg";
+import geetha from "../assets/speakerPhotos/geetha.svg";
+import prakash from "../assets/speakerPhotos/prakash sah.svg";
+import kuljeet from "../assets/speakerPhotos/kuljeet.svg";
+import sharad from "../assets/speakerPhotos/sharad bajaj.svg";
+import nitesh from "../assets/speakerPhotos/nitesh gupta.svg";
+import ashish from "../assets/speakerPhotos/ashish sood.svg";
 
 import collage from "../assets/councilCollages/Future Systems Council.svg";
 
@@ -9,42 +17,50 @@ const councilMembers = [
     name: "Sharad Bajaj",
     title: "VP Engineering",
     organization: "Microsoft (Agentic Data Platform)",
+    image: sharad,
   },
   {
-    name: "Prakash Shah",
+    name: "Prakash Sah",
     title: "Managing Partner & Head ",
     organization: "Data, Analytics & AI (Manufacturing), TCS",
+    image: prakash,
   },
   {
     name: "Parna Ghosh",
     title: "President & Group CIO",
     organization: "Uno Minda",
+    image: parna,
   },
   {
     name: "Harnath Babu",
     title: "Partner & CIO",
     organization: "KPMG India",
+    image: harnath,
   },
 
   {
     name: "Geetha Adinarayan",
     title: "Distinguished Engineer & CTO",
     organization: " IBM Consulting India & South Asia",
+    image: geetha,
   },
   {
     name: "Nitesh Gupta",
     title: "Principal Director",
     organization: "Cisco",
+    image: nitesh,
   },
   {
     name: "Ashish Sood",
     title: "Director of Engineering",
     organization: "Cisco",
+    image: ashish,
   },
   {
     name: "Kuljeet Singh",
     title: "Engineering Lead",
     organization: "Hitachi Digital Services (USA)",
+    image: kuljeet,
   },
 ];
 
@@ -65,24 +81,24 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
   };
 
   const leftRef = useRef(null);
-  const collageRef = useRef(null);
+  const collageRef2 = useRef(null);
 
   useEffect(() => {
     const syncHeights = () => {
       if (typeof window === "undefined") return;
-      if (!leftRef.current || !collageRef.current) return;
+      if (!leftRef.current || !collageRef2.current) return;
       // only enforce at large screens (lg ~= 1024px)
       if (window.innerWidth < 1024) {
-        collageRef.current.style.height = "";
-        collageRef.current.style.minHeight = "280px";
+        collageRef2.current.style.height = "";
+        collageRef2.current.style.minHeight = "280px";
         return;
       }
       const leftHeight = Math.ceil(
         leftRef.current.getBoundingClientRect().height
       );
       // set explicit height to match exactly
-      collageRef.current.style.minHeight = "";
-      collageRef.current.style.height = `${Math.max(leftHeight, 280)}px`;
+      collageRef2.current.style.minHeight = "";
+      collageRef2.current.style.height = `${Math.max(leftHeight, 280)}px`;
     };
 
     // initial sync and delayed sync (fonts/images/animations may change layout)
@@ -97,7 +113,7 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
     }
 
     // also re-sync when the collage image loads (in case it affects layout)
-    const imgEl = collageRef.current?.querySelector("img");
+    const imgEl = collageRef2.current?.querySelector("img");
     const onImgLoad = () => syncHeights();
     if (imgEl) imgEl.addEventListener("load", onImgLoad);
 
@@ -137,14 +153,24 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
 
       <div className="flex flex-col gap-8 relative w-full flex-[0_0_auto] lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-8">
         <div
-          ref={collageRef}
-          className="bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)] rounded-2xl overflow-hidden relative w-full lg:max-w-[688px] flex flex-col items-end justify-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
+          ref={collageRef2}
+          className=" overflow-hidden relative w-full lg:max-w-[688px] grid grid-cols-3 auto-rows-fr items-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
         >
-          <img
-            src={collage}
-            alt="Future Systems Council"
-            className="w-full h-auto object-contain"
-          />
+          {" "}
+          {councilMembers.map((member, index) => {
+            return (
+              <div
+                key={index}
+                className="w-full h-full bg-[linear-gradient(45deg,rgba(232,139,88,0.9)_0%,rgba(215,65,99,0.9)_48%,rgba(225,57,62,0.9)_100%)]"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className={`w-full h-full object-contain object-bottom`}
+                />
+              </div>
+            );
+          })}
         </div>
         <motion.div
           ref={leftRef}

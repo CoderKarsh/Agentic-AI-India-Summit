@@ -171,7 +171,7 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
         {/* bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)] */}
         <div
           ref={collageRef}
-          className=" overflow-hidden relative w-full lg:max-w-[688px] grid grid-cols-3 items-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
+          className=" overflow-hidden relative w-full lg:max-w-[688px] grid grid-cols-3 auto-rows-fr items-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
         >
           {" "}
           {advisoryMembers.map((member, index) => {

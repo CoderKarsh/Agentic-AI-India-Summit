@@ -8,6 +8,7 @@ import { StrategicAdvisoryBoardSection } from "../components/StrategicAdvisoryBo
 import { FutureSystemsCouncil } from "../components/FutureSystemsCouncil";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -48,6 +49,7 @@ const Home = () => {
         </div>
         <FutureSystemsCouncil className="px-8 py-8" />
       </main>
+      <Footer />
     </div>
   );
 };
