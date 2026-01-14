@@ -1,44 +1,50 @@
 import { Card, CardContent } from "./ui/Card";
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
-import collage from "../assets/councilCollages/Strategic Advisory Council.svg";
+import Panneerselvam from "../assets/speakerPhotos/Panneerselvam.svg";
+import vinamramishra from "../assets/speakerPhotos/vinamra mishra.svg";
+import rakeshrai from "../assets/speakerPhotos/Rakesh Rai.svg";
+import anantshanmugam from "../assets/speakerPhotos/anant shanmugam.png";
+import pankajrai from "../assets/speakerPhotos/pankaj rai.svg";
+import amangulati from "../assets/speakerPhotos/aman gulati.svg";
 
 const advisoryMembers = [
   {
     name: "Sh.\n Vinamra Mishra",
     title: "Joint Secretary",
     organization: "Ministry of MSME, GOI",
+    image: vinamramishra,
   },
   {
     name: "Dr. Panneerselvam Madanagopal",
     title: "CEO",
     organization: "MeitY Startup Hub, GOI",
+    image: Panneerselvam,
   },
   {
     name: "Rakesh K. Rai",
     title: "ADC & Joint Secretary",
     organization: "Ministry of MSME, GOI",
+    image: rakeshrai,
   },
   {
     name: "Ananthanarayana Shanmugam",
     title: "Senior VP & CFO",
     organization: "Invest India",
+    image: anantshanmugam,
   },
 
   {
     name: "Pankaj Rai",
     title: "Group Chief Data & Analytics Officer",
     organization: "Aditya Birla Group",
+    image: pankajrai,
   },
   {
     name: "Aman Gulati",
     title: "Deputy Director",
     organization: "CoE Industry 4.0",
-  },
-  {
-    name: "Srinivas Dwarakanath",
-    title: "Director General",
-    organization: "Aerospace India Association",
+    image: amangulati,
   },
 ];
 
@@ -132,7 +138,7 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
       <div className="flex flex-col gap-8 relative w-full flex-[0_0_auto] lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-8">
         <motion.div
           ref={leftRef}
-          className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative"
+          className="grid grid-cols-3 lg:grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative"
           variants={gridContainer}
           initial="hidden"
           whileInView="show"
@@ -162,16 +168,26 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
             </motion.div>
           ))}
         </motion.div>
-
+        {/* bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)] */}
         <div
           ref={collageRef}
-          className="bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)] rounded-2xl overflow-hidden relative w-full lg:max-w-[688px] flex flex-col items-end justify-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
+          className=" overflow-hidden relative w-full lg:max-w-[688px] grid grid-cols-3 items-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
         >
-          <img
-            src={collage}
-            alt="Strategic Advisory Council"
-            className="w-full h-auto object-contain"
-          />
+          {" "}
+          {advisoryMembers.map((member, index) => {
+            return (
+              <div
+                key={index}
+                className="w-full h-full bg-[linear-gradient(45deg,rgba(232,139,88,0.9)_0%,rgba(215,65,99,0.9)_48%,rgba(225,57,62,0.9)_100%)]"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className={`w-full h-full object-contain object-bottom`}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </motion.section>

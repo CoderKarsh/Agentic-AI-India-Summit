@@ -148,7 +148,7 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
         </div>
         <motion.div
           ref={leftRef}
-          className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 relative"
+          className="grid grid-cols-3 lg:grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 `re`lative"
           variants={gridContainer}
           initial="hidden"
           whileInView="show"

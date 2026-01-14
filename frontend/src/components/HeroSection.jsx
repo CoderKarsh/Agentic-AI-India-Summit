@@ -43,7 +43,7 @@ const HeroSection = ({ className = "", ...props }) => {
         {/* overlay content (button) sits above the video */}
         <div className="relative z-10 w-full flex justify-end">
           <button className="h-auto px-4 py-2 md:px-8 md:py-4 rounded-[120px] bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-90 transition-opacity ff-inter font-medium text-white text-sm md:text-base text-center tracking-[-0.32px] leading-[normal]">
-            Register Now
+            Buy Tickets
           </button>
         </div>
       </div>
