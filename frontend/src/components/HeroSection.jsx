@@ -2,6 +2,28 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const HeroSection = ({ className = "", ...props }) => {
+  const infoContainer = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.12 } },
+  };
+
+  const slideLeft = {
+    hidden: { x: -420, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
+
+  const slideRight = {
+    hidden: { x: 420, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
   return (
     <section
       id="home"
@@ -149,19 +171,31 @@ const HeroSection = ({ className = "", ...props }) => {
           </motion.div>
         </motion.h1>
       </section>
-      <motion.div className="overflow-hidden w-full px-8">
+      <motion.div
+        className="overflow-hidden flex w-full px-8 flex-col gap-1 lg:flex-row lg:justify-between"
+        variants={infoContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <motion.p
           className="flex flex-wrap xl:flex-nowrap items-end justify-start ff-inter font-normal text-neutral-700 text-base md:text-lg lg:text- tracking-[0] leading-relaxed lg:leading-8.25 whitespace-nowrap m-0"
-          initial={{ x: -420 }}
-          whileInView={{ x: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, ease: "easeInOut", delay: 0 }}
+          variants={slideLeft}
         >
           <span className="ff-inter font-normal text-neutral-700 text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25">
             Defining the Future of&nbsp;
           </span>
           <span className="ff-inria italic">Autonomous Intelligence</span>
         </motion.p>
+
+        <motion.div className="ff-inter text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25 flex flex-col lg:flex-row lg:w-[50%] lg:justify-between gap-0.5">
+          <motion.span variants={slideLeft} className="block">
+            Eros Hotel, New Delhi
+          </motion.span>
+          <motion.span variants={slideLeft} className="block">
+            19 June, 2026
+          </motion.span>
+        </motion.div>
       </motion.div>
 
       <div className="relative flex flex-col items-end justify-end gap-2.5 md:mx-4 py-5 w-full md:rounded-[20px] overflow-hidden aspect-video">
