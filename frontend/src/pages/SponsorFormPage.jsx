@@ -73,7 +73,7 @@ const SponsorFormPage = () => {
           </p>
 
           {submitted ? (
-            <div className="mt-8 p-6 rounded-lg bg-[#f7f7f7] shadow">
+            <div className="mt-8 p-6 rounded-lg bg-[#f9f9f9] shadow">
               <h2 className="font-semibold text-lg">Thank you</h2>
               <p className="mt-2 text-neutral-700">
                 We received your interest. We'll be in touch shortly.
@@ -82,7 +82,7 @@ const SponsorFormPage = () => {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="mt-8 bg-[#f7f7f7] p-6 rounded-lg shadow"
+              className="mt-8 bg-[#f9f9f9] p-6 rounded-lg shadow"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <label className="flex flex-col">
@@ -222,7 +222,7 @@ const SponsorFormPage = () => {
                       remarks: "",
                     })
                   }
-                  className="px-6 py-3 rounded-[120px] bg-[#f7f7f7] border border-neutral-200"
+                  className="px-6 py-3 rounded-[120px] bg-[#f9f9f9] border border-neutral-200"
                 >
                   Reset
                 </button>
