@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const KeyInsightsSection = ({ className = "", ...props }) => {
+export const PillarsSection = ({ className = "", ...props }) => {
   const pillars = [
     {
       icon: "https://c.animaapp.com/mk8nxs37jXzmJf/img/openailogo.svg",

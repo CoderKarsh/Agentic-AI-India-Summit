@@ -37,7 +37,7 @@ const themesData = [
 
 import { motion } from "framer-motion";
 
-export const PillarsOfTheSummitSection = ({ className = "", ...props }) => {
+export const WhyAttendSection = ({ className = "", ...props }) => {
   const container = {
     hidden: { opacity: 0, y: 24 },
     show: {

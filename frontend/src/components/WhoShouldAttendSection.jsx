@@ -36,8 +36,14 @@ const attendeeTypes = [
     animationDelay: "600ms",
   },
   {
-    text: "Startup Founders and Scaleup Leaders",
+    text: "Startup Founders",
     bgColor: "bg-[#e88b58]",
+    rounded: "rounded-[0px_140px_140px_0px]",
+    animationDelay: "700ms",
+  },
+  {
+    text: "Scaleup Leaders",
+    bgColor: "bg-[#e1393e]",
     rounded: "rounded-[0px_140px_140px_0px]",
     animationDelay: "700ms",
   },
@@ -51,7 +57,7 @@ const attendeeTypes = [
 
 import { motion } from "framer-motion";
 
-export const AboutTheSummitSection = ({ className = "", ...props }) => {
+export const WhoShouldAttendSection = ({ className = "", ...props }) => {
   return (
     <motion.section
       className={`flex flex-col w-full max-w-316 mx-auto items-center gap-[65px] px-4 py-8 ${className}`}
