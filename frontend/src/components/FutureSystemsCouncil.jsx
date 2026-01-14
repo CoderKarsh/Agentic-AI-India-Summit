@@ -138,7 +138,7 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
       <div className="flex flex-col gap-8 relative w-full flex-[0_0_auto] lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-8">
         <div
           ref={collageRef}
-          className="bg-[rgb(217,217,217)] rounded-2xl overflow-hidden relative w-full lg:max-w-[688px] flex flex-col items-end justify-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
+          className="bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)] rounded-2xl overflow-hidden relative w-full lg:max-w-[688px] flex flex-col items-end justify-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
         >
           <img
             src={collage}

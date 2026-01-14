@@ -165,7 +165,7 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
 
         <div
           ref={collageRef}
-          className="bg-[rgb(217,217,217)] rounded-2xl overflow-hidden relative w-full lg:max-w-[688px] flex flex-col items-end justify-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
+          className="bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)] rounded-2xl overflow-hidden relative w-full lg:max-w-[688px] flex flex-col items-end justify-end min-h-[280px] lg:min-h-0 lg:h-full self-stretch"
         >
           <img
             src={collage}
