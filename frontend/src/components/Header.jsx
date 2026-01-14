@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Speakers", href: "#speakers" },

@@ -3,22 +3,14 @@ import ComingSoon from "../components/ComingSoon";
 
 const ComingSoonPage = () => {
   const actions = [
-    { label: "Register", href: "#register", primary: true, disabled: true },
-    {
-      label: "Become a sponsor",
-      href: "#sponsor",
-      primary: false,
-      disabled: true,
-    },
+    { label: "Back to Home", href: "/", primary: true, disabled: false },
   ];
 
   return (
     <div className="w-full">
       <ComingSoon
-        title={"Registration & Sponsorship coming soon"}
-        subtitle={
-          "We're getting everything ready — please check back soon for registration and sponsorship opportunities."
-        }
+        title={"Coming soon"}
+        subtitle={"We're getting everything ready — please check back soon."}
         actions={actions}
       />
     </div>

@@ -8,11 +8,22 @@ export const ComingSoon = ({
 }) => {
   return (
     <section
-      className={`flex flex-col items-center justify-center w-full min-h-[60vh] px-6 py-12 bg-[#f9f9f9] ${className}`}
+      className={`flex flex-col items-center justify-center w-full min-h-[60vh] px-6 py-12 bg-[#f2f2f2] ${className}`}
     >
       <div className="max-w-[820px] w-full text-center">
-        <h1 className="font-samarkan text-5xl md:text-6xl text-[#111111] tracking-[-3px] leading-tight">
-          {title}
+        <h1 className="text-5xl md:text-6xl text-[#111111] tracking-[-3px] leading-tight">
+          {String(title)
+            .split(" ")
+            .map((word, wi) => {
+              const first = word.charAt(0) || "";
+              const rest = word.slice(1) || "";
+              return (
+                <span key={wi} className="inline-block mr-2">
+                  <span className="font-samarkan">{first}</span>
+                  <span className="ff-inria">{rest}</span>
+                </span>
+              );
+            })}
         </h1>
         <p className="mt-6 ff-inter text-base md:text-lg text-neutral-700 leading-7">
           {subtitle}
