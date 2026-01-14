@@ -25,7 +25,7 @@ const Home = () => {
         >
           <AboutSection className="px-8 py-8" />
         </motion.div>
-        <PillarsSection className="px-8 py-8" />
+        {/* <PillarsSection className="px-8 py-8" /> */}
         <WhyAttendSection className="px-8 py-8" />
         <WhoShouldAttendSection className="px-8 py-8" />
 

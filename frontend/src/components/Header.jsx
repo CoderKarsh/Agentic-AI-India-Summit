@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Speakers", href: "#speakers" },
-  { label: "Committee", href: "#committee" },
+  { label: "About", href: "/#about" },
+  { label: "Speakers", href: "/#speakers" },
+  { label: "Committee", href: "/#committee" },
   { label: "Register", href: "/register" },
   { label: "Become a sponsor", href: "/sponsor" },
 ];
@@ -11,6 +11,7 @@ const navItems = [
 const Header = ({ className = "", ...props }) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -24,7 +25,10 @@ const Header = ({ className = "", ...props }) => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      const offset = 100; // pixels to offset so element sits 100px below top
+      const rect = targetElement.getBoundingClientRect();
+      const absoluteTop = window.scrollY + rect.top - offset;
+      window.scrollTo({ top: absoluteTop, behavior: "smooth" });
     }
   };
 
@@ -67,20 +71,41 @@ const Header = ({ className = "", ...props }) => {
 
         {/* desktop nav */}
         <div className="hidden md:inline-flex items-center justify-end gap-8">
-          {navItems.map((item) =>
-            item.href.startsWith("#") ? (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => {
-                  handleNavClick(e, item.href);
-                  setOpen(false);
-                }}
-                className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer"
-              >
-                {item.label}
-              </a>
-            ) : (
+          {navItems.map((item) => {
+            // items with hashes should behave differently depending on current pathname
+            if (item.href.includes("#")) {
+              // if we're on the home page, intercept and smooth-scroll in-page
+              if (location.pathname === "/" || location.pathname === "") {
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href.replace("/", "")}
+                    onClick={(e) => {
+                      handleNavClick(e, item.href.replace("/", ""));
+                      setOpen(false);
+                    }}
+                    className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer"
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
+
+              // otherwise, navigate using router Link so ScrollToHash can run after navigation
+              return (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onClick={() => setOpen(false)}
+                  className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer"
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
+            // no hash: normal route link
+            return (
               <Link
                 key={item.label}
                 to={item.href}
@@ -89,8 +114,8 @@ const Header = ({ className = "", ...props }) => {
               >
                 {item.label}
               </Link>
-            )
-          )}
+            );
+          })}
         </div>
 
         {/* mobile hamburger */}
@@ -132,20 +157,37 @@ const Header = ({ className = "", ...props }) => {
         {open && (
           <div className="md:hidden absolute right-4 top-full mt-2 w-48 bg-white rounded-md shadow-lg z-50">
             <div className="flex flex-col p-2">
-              {navItems.map((item) =>
-                item.href.startsWith("#") ? (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    onClick={(e) => {
-                      handleNavClick(e, item.href);
-                      setOpen(false);
-                    }}
-                    className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100"
-                  >
-                    {item.label}
-                  </a>
-                ) : (
+              {navItems.map((item) => {
+                if (item.href.includes("#")) {
+                  if (location.pathname === "/" || location.pathname === "") {
+                    return (
+                      <a
+                        key={item.label}
+                        href={item.href.replace("/", "")}
+                        onClick={(e) => {
+                          handleNavClick(e, item.href.replace("/", ""));
+                          setOpen(false);
+                        }}
+                        className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100"
+                      >
+                        {item.label}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      onClick={() => setOpen(false)}
+                      className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
+
+                return (
                   <Link
                     key={item.label}
                     to={item.href}
@@ -154,8 +196,8 @@ const Header = ({ className = "", ...props }) => {
                   >
                     {item.label}
                   </Link>
-                )
-              )}
+                );
+              })}
             </div>
           </div>
         )}
