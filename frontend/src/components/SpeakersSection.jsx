@@ -47,7 +47,7 @@ export const SpeakersSection = () => {
         </h2>
 
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-x-8 lg:gap-y-12"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-x-8 lg:gap-y-12"
           variants={container}
         >
           {speakersData.map((speaker, index) => {
@@ -56,22 +56,6 @@ export const SpeakersSection = () => {
               hover: {
                 scale: 1.01,
                 boxShadow: "0px 30px 25px rgba(0,0,0,0.15)",
-                transition: { duration: 0.35, ease: "easeOut" },
-              },
-            };
-
-            const textVariants = {
-              rest: {
-                scale: 1,
-                y: 0,
-                filter: "drop-shadow(0px 0px 0px rgba(0,0,0,0))",
-                textShadow: "none",
-              },
-              hover: {
-                scale: 1.02,
-                y: -6,
-                filter: "drop-shadow(0px 30px 60px rgba(0,0,0,0.2))",
-                textShadow: "0px 12px 40px rgba(0,0,0,0.15)",
                 transition: { duration: 0.35, ease: "easeOut" },
               },
             };
@@ -91,23 +75,23 @@ export const SpeakersSection = () => {
                       variants={imgVariants}
                     >
                       <img
-                        className="absolute inset-0 w-full h-full object-cover rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300 shadow-none group-hover:shadow-xl"
+                        className="absolute inset-0 w-full h-full object-contain object-bottom rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300 shadow-none group-hover:shadow-xl"
                         alt={speaker.name}
                         src={speaker.image}
                       />
                     </motion.div>
 
-                    <motion.div
-                      className="flex flex-col gap-2"
-                      variants={textVariants}
-                    >
-                      <h3 className="ff-inter font-normal text-white text-xl md:text-2xl tracking-[-1.20px] leading-6">
+                    <motion.div className="flex flex-col gap-4">
+                      <h3 className="ff-inter font-semibold text-white text-base md:text-xl tracking-[-1.20px] leading-6">
                         {speaker.name}
                       </h3>
-                      <p className="ff-inter font-normal text-white text-sm md:text-base tracking-[-0.80px] leading-[22.4px]">
+                      <p className="ff-inter font-normal text-white opacity-80 text-sm md:text-base tracking-[-0.80px] leading-[22.4px]">
                         {speaker.title}
                         <br />
-                        {speaker.organization}
+                        <span className="italic mt-4">
+                          {" "}
+                          {speaker.organization}
+                        </span>
                       </p>
                     </motion.div>
                   </CardContent>
