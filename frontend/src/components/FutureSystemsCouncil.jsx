@@ -2,22 +2,22 @@ import { Card, CardContent } from "./ui/Card";
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 import harnath from "../assets/speakerPhotos/harnath babu.svg";
-import parna from "../assets/speakerPhotos/parna ghosh.svg";
 import geetha from "../assets/speakerPhotos/geetha.svg";
 import prakash from "../assets/speakerPhotos/prakash sah.svg";
 import kuljeet from "../assets/speakerPhotos/kuljeet.svg";
 import sharad from "../assets/speakerPhotos/sharad bajaj.svg";
 import nitesh from "../assets/speakerPhotos/nitesh gupta.svg";
 import ashish from "../assets/speakerPhotos/ashish sood.svg";
+import abhisheklal from "../assets/speakerPhotos/abishek lal.svg";
 
 import collage from "../assets/councilCollages/Future Systems Council.svg";
 
 const councilMembers = [
   {
-    name: "Sharad Bajaj",
-    title: "VP Engineering",
-    organization: "Microsoft (Agentic Data Platform)",
-    image: sharad,
+    name: "Harnath Babu",
+    title: "Partner & CIO",
+    organization: "KPMG India",
+    image: harnath,
   },
   {
     name: "Prakash Sah",
@@ -26,18 +26,11 @@ const councilMembers = [
     image: prakash,
   },
   {
-    name: "Parna Ghosh",
-    title: "President & Group CIO",
-    organization: "Uno Minda",
-    image: parna,
+    name: "Abhishek Lal",
+    title: "CDO",
+    organization: "Marks & Spencer Reliance India Pvt. Ltd.",
+    image: abhisheklal,
   },
-  {
-    name: "Harnath Babu",
-    title: "Partner & CIO",
-    organization: "KPMG India",
-    image: harnath,
-  },
-
   {
     name: "Geetha Adinarayan",
     title: "Distinguished Engineer & CTO",
@@ -45,9 +38,15 @@ const councilMembers = [
     image: geetha,
   },
   {
+    name: "Sharad Bajaj",
+    title: "VP Engineering",
+    organization: "Microsoft (Agentic Data Platform)",
+    image: sharad,
+  },
+  {
     name: "Nitesh Gupta",
-    title: "Principal Director",
-    organization: "Cisco",
+    title: "Director Systems Engineering",
+    organization: "Microsoft",
     image: nitesh,
   },
   {
