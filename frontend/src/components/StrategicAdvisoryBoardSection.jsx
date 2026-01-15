@@ -121,8 +121,7 @@ export const StrategicAdvisoryBoardSection = ({ className = "", ...props }) => {
     >
       <header className="inline-flex flex-col items-start gap-4 relative flex-[0_0_auto]">
         <h2 className="relative w-full max-w-[515px] mt-[-1.00px] font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
-          <span className="tracking-[-1.61px]">S</span>
-          <span className="ff-inria tracking-[-1.61px]">trategic</span>
+          <span className="ff-inria tracking-[-1.61px]">strategic</span>
           <span className="tracking-[-1.61px]"> A</span>
           <span className="ff-inria tracking-[-1.61px]">dvisory</span>
           <span className="tracking-[-1.61px]"> C</span>

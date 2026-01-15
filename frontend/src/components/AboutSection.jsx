@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { AboutGraphic } from "./AboutGraphic";
 
 export const AboutSection = ({ className = "", ...props }) => {
   return (
@@ -19,10 +20,10 @@ export const AboutSection = ({ className = "", ...props }) => {
           <span className="ff-inria tracking-[0]">bout </span>
           <span className="tracking-[0]">t</span>
           <span className="ff-inria tracking-[0]">he </span>
-          <span className="tracking-[0]">s</span>
+          <span className="ff-inria tracking-[0]">s</span>
           <span className="ff-inria tracking-[0]">ummit</span>
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full place-content-center">
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,19 +59,20 @@ export const AboutSection = ({ className = "", ...props }) => {
             helping position the nation at the forefront of the global Agentic
             AI economy.
           </motion.p>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
-            className="gradient-background aspect-square flex items-stretch justify-stretch "
+            className="gradient-background flex items-stretch justify-stretch "
           >
             <img
               src="/Infographic.svg"
               alt=""
-              className="object-center lg:max-w-150"
+              className="object-fill lg:max-w-150"
             />
-          </motion.div>
+          </motion.div> */}
+          <AboutGraphic />
         </div>
       </div>
     </motion.section>

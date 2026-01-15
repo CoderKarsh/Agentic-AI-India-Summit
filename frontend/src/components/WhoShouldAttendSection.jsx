@@ -70,7 +70,7 @@ export const WhoShouldAttendSection = ({ className = "", ...props }) => {
       <h2 className="relative self-stretch font-samarkan font-normal text-transparent text-5xl text-center tracking-[-3.36px] leading-[48px]">
         <span className="text-[#111111] tracking-[-1.61px]">W</span>
         <span className="ff-inria text-[#111111] tracking-[-1.61px]">ho</span>
-        <span className="text-[#111111] tracking-[-1.61px]"> s</span>
+        <span className="ff-inria text-[#111111] tracking-[-1.61px]"> s</span>
         <span className="ff-inria text-[#111111] tracking-[-1.61px]">
           hould{" "}
         </span>

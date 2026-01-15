@@ -166,12 +166,10 @@ const HeroSection = ({ className = "", ...props }) => {
                   },
                 }}
               >
-                {Array.from("Summit ").map((ch, i) => (
+                {Array.from("summit ").map((ch, i) => (
                   <motion.span
                     key={i}
-                    className={`inline-block tracking-[-2.87px] ${
-                      i === 0 ? "font-samarkan" : "ff-inria"
-                    }`}
+                    className={`inline-block tracking-[-2.87px] ff-inria`}
                     variants={{
                       hidden: { y: "110%" },
                       show: {

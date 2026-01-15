@@ -40,9 +40,8 @@ export const SpeakersSection = () => {
 
       <div className="relative max-w-316 mx-auto px-4">
         <h2 className="mb-8 font-samarkan font-normal text-5xl tracking-[-3.36px] leading-12">
-          <span className="text-white tracking-[-1.61px]">s</span>
           <span className="ff-inria text-white tracking-[-1.61px]">
-            peakers
+            speakers
           </span>
         </h2>
 
@@ -85,13 +84,10 @@ export const SpeakersSection = () => {
                       <h3 className="ff-inter font-semibold text-white text-base md:text-xl tracking-[-1.20px] leading-6">
                         {speaker.name}
                       </h3>
-                      <p className="ff-inter font-normal text-white opacity-80 text-sm md:text-base tracking-[-0.80px] leading-[22.4px]">
+                      <p className="ff-inter font-normal text-white opacity-80 hover:opacity-100 text-sm md:text-base tracking-[-0.80px] leading-[22.4px]">
                         {speaker.title}
                         <br />
-                        <span className="italic mt-4">
-                          {" "}
-                          {speaker.organization}
-                        </span>
+                        <span className=" mt-4"> {speaker.organization}</span>
                       </p>
                     </motion.div>
                   </CardContent>

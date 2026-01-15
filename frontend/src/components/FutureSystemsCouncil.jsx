@@ -10,8 +10,6 @@ import nitesh from "../assets/speakerPhotos/nitesh gupta.svg";
 import ashish from "../assets/speakerPhotos/ashish sood.svg";
 import abhisheklal from "../assets/speakerPhotos/abishek lal.svg";
 
-import collage from "../assets/councilCollages/Future Systems Council.svg";
-
 const councilMembers = [
   {
     name: "Harnath Babu",
@@ -138,8 +136,7 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
         <h2 className="relative w-full max-w-[515px] mt-[-1.00px] font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
           <span className="tracking-[-1.61px]">F</span>
           <span className="ff-inria tracking-[-1.61px]">uture</span>
-          <span className="tracking-[-1.61px]"> S</span>
-          <span className="ff-inria tracking-[-1.61px]">ystems</span>
+          <span className="ff-inria tracking-[-1.61px]"> systems</span>
           <span className="tracking-[-1.61px]"> C</span>
           <span className="ff-inria tracking-[-1.61px]">ouncil</span>
         </h2>
