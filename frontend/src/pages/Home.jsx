@@ -1,7 +1,7 @@
 import { WhoShouldAttendSection } from "../components/WhoShouldAttendSection";
 import { AboutSection } from "../components/AboutSection";
 import { HeroSection } from "../components/HeroSection";
-import { PillarsSection } from "../components/PillarsSection";
+import { AgenticAIEconomy } from "../components/AgenticAIEconomy";
 import { WhyAttendSection } from "../components/WhyAttendSection";
 import { SpeakersSection } from "../components/SpeakersSection";
 import { StrategicAdvisoryBoardSection } from "../components/StrategicAdvisoryBoardSection";
@@ -26,7 +26,7 @@ const Home = () => {
         >
           <AboutSection className="px-8 py-8" />
         </motion.div>
-        {/* <PillarsSection className="px-8 py-8" /> */}
+        <AgenticAIEconomy className="px-8 py-8" />
         <WhyAttendSection className="px-8 py-8" />
         <WhoShouldAttendSection className="px-8 py-8" />
 
