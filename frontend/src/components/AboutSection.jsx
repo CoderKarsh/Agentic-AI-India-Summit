@@ -63,15 +63,12 @@ export const AboutSection = ({ className = "", ...props }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
-            /* Use inline-flex so the gradient container shrink-wraps the image instead of stretching
-               to a square. This prevents the background gradient from showing outside the image
-               when the parent grid column grows larger than the image. */
-            className="gradient-background inline-flex items-center justify-center"
+            className="gradient-background aspect-square flex items-stretch justify-stretch "
           >
             <img
               src="/Infographic.svg"
-              alt="Infographic showing Technology, Startups, MSMEs, Governments"
-              className="object-center lg:max-w-150 max-w-full h-auto"
+              alt=""
+              className="object-center lg:max-w-150"
             />
           </motion.div>
         </div>
