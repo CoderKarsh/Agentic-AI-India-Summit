@@ -75,7 +75,7 @@ export const SpeakersSection = () => {
                       variants={imgVariants}
                     >
                       <img
-                        className="absolute inset-0 w-full h-full object-contain object-bottom rounded-lg md:grayscale group-hover:grayscale-0 transition-all duration-300 shadow-none group-hover:shadow-xl"
+                        className="absolute inset-0 w-full h-full object-contain object-bottom rounded-lg  transition-all duration-300 shadow-none group-hover:shadow-xl"
                         alt={speaker.name}
                         src={speaker.image}
                       />

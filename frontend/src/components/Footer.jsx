@@ -33,7 +33,7 @@ const Logo = () => (
 
 const SocialIcon = ({ href, children, label }) => (
   <a
-    href={href}
+    // href={href}
     aria-label={label}
     target="_blank"
     rel="noopener noreferrer"
@@ -98,7 +98,7 @@ const Footer = ({ className = "", ...props }) => {
           <div className="flex flex-col gap-4">
             <div className="flex gap-4 items-center">
               <a
-                href="/privacy.html"
+                // href="/privacy.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ff-inter text-sm text-[#666666] hover:text-white"
@@ -106,7 +106,7 @@ const Footer = ({ className = "", ...props }) => {
                 Privacy Policy
               </a>
               <a
-                href="/terms.html"
+                // href="/terms.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ff-inter text-sm text-[#666666] hover:text-white"
