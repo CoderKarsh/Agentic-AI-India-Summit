@@ -28,7 +28,7 @@ export const AboutSection = ({ className = "", ...props }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
-            className="ff-inter font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px]"
+            className="ff-inter font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px] w-full"
           >
             The Agentic AI India Summit is the platform that defines the future
             of the Agentic AI driven landscape by bringing together the complete
@@ -63,12 +63,15 @@ export const AboutSection = ({ className = "", ...props }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
-            className="gradient-background"
+            /* Use inline-flex so the gradient container shrink-wraps the image instead of stretching
+               to a square. This prevents the background gradient from showing outside the image
+               when the parent grid column grows larger than the image. */
+            className="gradient-background inline-flex items-center justify-center"
           >
             <img
               src="/Infographic.svg"
-              alt=""
-              className="max-w-150 object-right"
+              alt="Infographic showing Technology, Startups, MSMEs, Governments"
+              className="object-center lg:max-w-150 max-w-full h-auto"
             />
           </motion.div>
         </div>

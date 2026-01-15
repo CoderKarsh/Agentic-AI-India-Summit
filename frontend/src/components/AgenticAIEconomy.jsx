@@ -1,9 +1,4 @@
 import { motion } from "framer-motion";
-// import infographic from "/Infographic.svg";
-// import infographicMW from "/InfographicMW.svg";
-// import infographicMP from "/InfographicMP.svg";
-// import infographicMO from "/InfographicMO.svg";
-// import infographicMR from "/InfographicMR.svg";
 
 export const AgenticAIEconomy = ({ className = "", ...props }) => {
   return (
@@ -24,11 +19,7 @@ export const AgenticAIEconomy = ({ className = "", ...props }) => {
         })}
       </h2>
       <div className="gradient-background">
-        <img
-          src="/Infographic.svg"
-          alt=""
-          className="max-w-200 object-center"
-        />
+        <img src="/Infographic.svg" alt="" className="object-contain" />
       </div>
     </section>
   );
