@@ -55,6 +55,48 @@
     border-color: var(--color-primary-orange);
   }
 }
+.gradient-background {
+  /* Use a rotating radial gradient layer for a more prominent effect. We create a pseudo-element
+     so the element's content/layout is unaffected while enabling a larger, soft radial blend. */
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-background::before {
+  content: "";
+  position: absolute;
+  inset: -30%; /* make the radial larger than the container for a softer falloff */
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(232, 139, 88, 1) 0%,
+    rgba(224, 99, 110, 0.95) 20%,
+    rgba(209, 80, 119, 0.9) 40%,
+    rgba(177, 60, 80, 0.85) 70%,
+    rgba(185, 75, 65, 0.75) 100%
+  );
+  transform-origin: 50% 50%;
+  filter: blur(16px) saturate(120%);
+  opacity: 0.98;
+  z-index: -1;
+  animation: gradient-rotate 6s linear infinite;
+  will-change: transform, opacity;
+}
+
+/* slightly faster pulse to make the gradient feel lively */
+@keyframes gradient-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.98;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.98;
+  }
+}
 
 /* Animations removed: keep keyframes and utility removed to disable fade-in animations */
 

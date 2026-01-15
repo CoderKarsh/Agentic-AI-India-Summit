@@ -23,7 +23,13 @@ export const AgenticAIEconomy = ({ className = "", ...props }) => {
           );
         })}
       </h2>
-      <img src="/Infographic.svg" alt="" className="max-w-200 object-center" />
+      <div className="gradient-background">
+        <img
+          src="/Infographic.svg"
+          alt=""
+          className="max-w-200 object-center"
+        />
+      </div>
     </section>
   );
 };

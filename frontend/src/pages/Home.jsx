@@ -17,16 +17,16 @@ const Home = () => {
 
       <main className="w-full space-y-30">
         <HeroSection />
-        <motion.div
+        {/* <motion.div
           className=" bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-        >
-          <AboutSection className="px-8 py-8" />
-        </motion.div>
-        <AgenticAIEconomy className="px-8 py-8" />
+        > */}
+        <AboutSection className="px-8 py-8" />
+        {/* </motion.div> */}
+        {/* <AgenticAIEconomy className="px-8 py-8" /> */}
         <WhyAttendSection className="px-8 py-8" />
         <WhoShouldAttendSection className="px-8 py-8" />
 
