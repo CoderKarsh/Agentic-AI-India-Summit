@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Logo = () => (
   <a
     href="#home"
-    className="relative flex flex-col gap-1.5 items-start justify-center font-samarkan font-normal text-2xl tracking-[-1.68px] leading-6"
+    className="relative flex flex-col gap-1.5 items-start justify-center ff-inter font-normal text-2xl tracking-[-1.68px] leading-6"
   >
     <div className="flex items-baseline text-[44px]">
       <span className="text-primary-pink tracking-[-0.40px] leading-[21.8px]">
         A
       </span>
-      <span className="ff-inria text-white tracking-[-0.40px] leading-[21.8px]">
+      <span className="ff-inter text-white tracking-[-0.40px] leading-[21.8px]">
         g&nbsp;
       </span>
       <span className="text-primary-orange tracking-[-0.40px] leading-[21.8px]">
@@ -21,10 +21,10 @@ const Logo = () => (
       </span>
     </div>
     <div className="flex items-baseline">
-      <span className="ff-inria text-primary-orange tracking-[-0.40px] leading-[21.8px]">
+      <span className="ff-inter text-primary-orange tracking-[-0.40px] leading-[21.8px]">
         s
       </span>
-      <span className="ff-inria tracking-[-0.40px] leading-[21.8px] text-white">
+      <span className="ff-inter tracking-[-0.40px] leading-[21.8px] text-white">
         ummit
       </span>
     </div>

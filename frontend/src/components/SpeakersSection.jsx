@@ -39,8 +39,8 @@ export const SpeakersSection = () => {
       />
 
       <div className="relative max-w-316 mx-auto px-4">
-        <h2 className="mb-8 font-samarkan font-normal text-5xl tracking-[-3.36px] leading-12">
-          <span className="ff-inria text-white tracking-[-1.61px]">
+        <h2 className="mb-8 ff-inter font-normal text-5xl tracking-[-3.36px] leading-12">
+          <span className="ff-inter text-white tracking-[-1.61px]">
             speakers
           </span>
         </h2>
@@ -70,11 +70,11 @@ export const SpeakersSection = () => {
                 <Card className="bg-transparent border-none shadow-none">
                   <CardContent className="p-0 flex flex-col gap-4">
                     <motion.div
-                      className="relative w-full aspect-square bg-white rounded-lg overflow-hidden"
+                      className="relative w-full aspect-square bg-white  overflow-hidden"
                       variants={imgVariants}
                     >
                       <img
-                        className="absolute inset-0 w-full h-full object-contain object-bottom rounded-lg  transition-all duration-300 shadow-none group-hover:shadow-xl"
+                        className="absolute inset-0 w-full h-full object-contain object-bottom   transition-all duration-300 shadow-none group-hover:shadow-xl"
                         alt={speaker.name}
                         src={speaker.image}
                       />

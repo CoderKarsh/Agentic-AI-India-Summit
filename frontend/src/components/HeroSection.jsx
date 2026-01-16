@@ -49,7 +49,7 @@ const HeroSection = ({ className = "", ...props }) => {
       </div>
       <section className="flex flex-wrap lg:flex-nowrap items-end gap-8 px-8 lg:gap-28.75 w-full ">
         <motion.h1
-          className="flex items-baseline justify-start flex-wrap font-samarkan font-normal text-[#111111] text-[64px] md:text-8xl leading-none"
+          className="flex items-baseline justify-start flex-wrap ff-inter font-normal text-[#111111] text-[64px] md:text-8xl leading-none"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.8 }}
@@ -74,7 +74,7 @@ const HeroSection = ({ className = "", ...props }) => {
                   <motion.span
                     key={i}
                     className={`inline-block tracking-[-2.87px] ${
-                      i === 0 ? "font-samarkan" : "ff-inria"
+                      i === 0 ? "ff-inter" : "ff-inter"
                     }`}
                     variants={{
                       hidden: { y: "110%" },
@@ -106,7 +106,7 @@ const HeroSection = ({ className = "", ...props }) => {
                   <motion.span
                     key={i}
                     className={`inline-block tracking-[-2.87px] ${
-                      i === 0 ? "font-samarkan" : "ff-inria"
+                      i === 0 ? "ff-inter" : "ff-inter"
                     }`}
                     variants={{
                       hidden: { y: "110%" },
@@ -138,7 +138,7 @@ const HeroSection = ({ className = "", ...props }) => {
                   <motion.span
                     key={i}
                     className={`inline-block tracking-[-2.87px] ${
-                      i === 0 ? "font-samarkan" : "ff-inria"
+                      i === 0 ? "ff-inter" : "ff-inter"
                     }`}
                     variants={{
                       hidden: { y: "110%" },
@@ -169,7 +169,7 @@ const HeroSection = ({ className = "", ...props }) => {
                 {Array.from("summit ").map((ch, i) => (
                   <motion.span
                     key={i}
-                    className={`inline-block tracking-[-2.87px] ff-inria`}
+                    className={`inline-block tracking-[-2.87px] ff-inter`}
                     variants={{
                       hidden: { y: "110%" },
                       show: {
@@ -200,15 +200,15 @@ const HeroSection = ({ className = "", ...props }) => {
           <span className="ff-inter font-normal text-neutral-700 text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25">
             Defining the Future of&nbsp;
           </span>
-          <span className="ff-inria italic">Autonomous Intelligence</span>
+          <span className="ff-inter italic">Autonomous Intelligence</span>
         </motion.p>
 
         <motion.div className="ff-inter text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25 flex flex-col lg:flex-row lg:w-[50%] lg:justify-between gap-0.5">
           <motion.span variants={slideLeft} className="block">
-            Eros Hotel, <span className="ff-inria italic">New Delhi</span>
+            Eros Hotel, <span className="ff-inter italic">New Delhi</span>
           </motion.span>
           <motion.span variants={slideLeft} className="block">
-            19 June, <span className="ff-inria italic">2026</span>
+            19 June, <span className="ff-inter italic">2026</span>
           </motion.span>
         </motion.div>
       </motion.div>

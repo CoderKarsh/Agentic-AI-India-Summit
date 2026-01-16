@@ -101,13 +101,13 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
         variants={headerVariant}
       >
         <motion.h2
-          className="self-stretch font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]"
+          className="self-stretch ff-inter font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]"
           variants={text}
         >
           <span className="tracking-[-1.61px]">W</span>
-          <span className="ff-inria tracking-[-1.61px]">hy</span>
+          <span className="ff-inter tracking-[-1.61px]">hy</span>
           <span className="tracking-[-1.61px]"> a</span>
-          <span className="ff-inria tracking-[-1.61px]">ttend?</span>
+          <span className="ff-inter tracking-[-1.61px]">ttend?</span>
         </motion.h2>
 
         <motion.p
@@ -126,9 +126,9 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
         className="flex flex-col items-start gap-6 w-full"
         variants={text}
       >
-        <h3 className="self-stretch font-samarkan font-normal text-[#111111] text-[32px] tracking-[-2.24px] leading-8">
+        <h3 className="self-stretch ff-inter font-normal text-[#111111] text-[32px] tracking-[-2.24px] leading-8">
           <span className="tracking-[-0.72px]">T</span>
-          <span className="ff-inria tracking-[-0.72px]">hemes</span>
+          <span className="ff-inter tracking-[-0.72px]">hemes</span>
         </h3>
 
         <motion.div

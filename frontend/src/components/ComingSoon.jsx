@@ -19,8 +19,8 @@ export const ComingSoon = ({
               const rest = word.slice(1) || "";
               return (
                 <span key={wi} className="inline-block mr-2">
-                  <span className="font-samarkan">{first}</span>
-                  <span className="ff-inria">{rest}</span>
+                  <span className="ff-inter">{first}</span>
+                  <span className="ff-inter">{rest}</span>
                 </span>
               );
             })}

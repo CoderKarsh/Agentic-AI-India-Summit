@@ -67,15 +67,15 @@ export const WhoShouldAttendSection = ({ className = "", ...props }) => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
-      <h2 className="relative self-stretch font-samarkan font-normal text-transparent text-5xl text-center tracking-[-3.36px] leading-[48px]">
+      <h2 className="relative self-stretch ff-inter font-normal text-transparent text-5xl text-center tracking-[-3.36px] leading-[48px]">
         <span className="text-[#111111] tracking-[-1.61px]">W</span>
-        <span className="ff-inria text-[#111111] tracking-[-1.61px]">ho</span>
-        <span className="ff-inria text-[#111111] tracking-[-1.61px]"> s</span>
-        <span className="ff-inria text-[#111111] tracking-[-1.61px]">
+        <span className="ff-inter text-[#111111] tracking-[-1.61px]">ho</span>
+        <span className="ff-inter text-[#111111] tracking-[-1.61px]"> s</span>
+        <span className="ff-inter text-[#111111] tracking-[-1.61px]">
           hould{" "}
         </span>
         <span className="text-[#111111] tracking-[-1.61px]">a</span>
-        <span className="ff-inria text-[#111111] tracking-[-1.61px]">
+        <span className="ff-inter text-[#111111] tracking-[-1.61px]">
           ttend?
         </span>
       </h2>

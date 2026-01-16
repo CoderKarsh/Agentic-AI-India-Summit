@@ -10,18 +10,18 @@ export const AboutSection = ({ className = "", ...props }) => {
     >
       <div className="relative z-10 flex flex-col gap-6">
         <motion.h2
-          className="font-samarkan font-normal text-[#111111] text-5xl leading-[48px]"
+          className="ff-inter font-normal text-[#111111] text-5xl leading-[48px]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           <span className="tracking-[0]">A</span>
-          <span className="ff-inria tracking-[0]">bout </span>
+          <span className="ff-inter tracking-[0]">bout </span>
           <span className="tracking-[0]">t</span>
-          <span className="ff-inria tracking-[0]">he </span>
-          <span className="ff-inria tracking-[0]">s</span>
-          <span className="ff-inria tracking-[0]">ummit</span>
+          <span className="ff-inter tracking-[0]">he </span>
+          <span className="ff-inter tracking-[0]">S</span>
+          <span className="ff-inter tracking-[0]">ummit</span>
         </motion.h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full place-content-center">
           <motion.p

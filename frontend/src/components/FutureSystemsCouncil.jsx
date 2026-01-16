@@ -133,12 +133,12 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <header className="inline-flex flex-col items-start gap-4 relative flex-[0_0_auto]">
-        <h2 className="relative w-full max-w-[515px] mt-[-1.00px] font-samarkan font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
+        <h2 className="relative w-full max-w-[515px] mt-[-1.00px] ff-inter font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]">
           <span className="tracking-[-1.61px]">F</span>
-          <span className="ff-inria tracking-[-1.61px]">uture</span>
-          <span className="ff-inria tracking-[-1.61px]"> systems</span>
+          <span className="ff-inter tracking-[-1.61px]">uture</span>
+          <span className="ff-inter tracking-[-1.61px]"> systems</span>
           <span className="tracking-[-1.61px]"> C</span>
-          <span className="ff-inria tracking-[-1.61px]">ouncil</span>
+          <span className="ff-inter tracking-[-1.61px]">ouncil</span>
         </h2>
 
         <p className="relative w-full max-w-[376px] ff-inter font-normal text-[#3d3d3d] text-base tracking-[0] leading-[26.4px]">
