@@ -170,7 +170,7 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
         </div>
         <motion.div
           ref={leftRef}
-          className="grid grid-cols-3 lg:grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 `re`lative"
+          className="grid grid-cols-2 w-full max-w-[481px] gap-x-8 gap-y-12 `re`lative"
           variants={gridContainer}
           initial="hidden"
           whileInView="show"
@@ -179,19 +179,22 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
           {councilMembers.map((member, index) => (
             <motion.div key={index} variants={cardItem}>
               <Card className="flex flex-col w-full h-full max-w-[214px] border-0 shadow-none bg-transparent">
-                <CardContent className="flex w-full h-full flex-col gap-4  p-0 ">
-                  <motion.h3 className="text-[#111111] relative mt-[-1.00px] ff-inter font-normal text-2xl tracking-[-1.20px] leading-6 overflow-hidden">
+                <CardContent className="flex w-full h-full flex-col gap-2 md:gap-4  p-0 ">
+                  <motion.h3 className="text-[#111111] relative mt-[-1.00px] ff-inter font-normal text-xl md:text-2xl tracking-[-1.20px] leading-6 overflow-hidden">
                     <motion.span className="inline-block" variants={reveal}>
                       {member.name}
                     </motion.span>
                   </motion.h3>
 
-                  <motion.div className="text-[#111111] relative ff-inter font-normal text-base tracking-[-0.80px] leading-[22.4px] overflow-hidden">
+                  <motion.div className="text-[#111111] relative ff-inter font-normal text-sm md:text-base tracking-[-0.80px] leading-[22.4px] overflow-hidden">
                     <motion.span className="inline-block" variants={reveal}>
                       {member.title}
                     </motion.span>
                     <br />
-                    <motion.span className="inline-block" variants={reveal}>
+                    <motion.span
+                      className="inline-block text-sm md:text-base "
+                      variants={reveal}
+                    >
                       {member.organization}
                     </motion.span>
                   </motion.div>

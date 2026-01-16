@@ -1,10 +1,9 @@
 import React from "react";
 import AgenticAI from "../assets/Agentic AI.svg";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const AboutGraphic = () => {
-  const controls = useAnimation();
-  const imageControls = useAnimation();
+  // Using Framer Motion's whileInView + transition.delay for sequencing; no manual controls needed.
 
   const containerVariants = {
     hidden: {},
@@ -16,7 +15,7 @@ export const AboutGraphic = () => {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 2, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
@@ -31,7 +30,7 @@ export const AboutGraphic = () => {
     show: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.42, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 1.5, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
@@ -40,32 +39,17 @@ export const AboutGraphic = () => {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 2, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
   const imageVariant = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.6 } },
+    visible: { opacity: 1, transition: { duration: 1 } },
   };
 
-  // trigger animations when component enters viewport
-  const containerRef = React.useRef(null);
-  const isInView = useInView(containerRef, { once: true, amount: 0.6 });
-
-  React.useEffect(() => {
-    if (!isInView) return;
-    let mounted = true;
-    (async () => {
-      // start staggered card animations
-      await controls.start("show");
-      // after cards finish, fade in the image
-      if (mounted) await imageControls.start("visible");
-    })();
-    return () => {
-      mounted = false;
-    };
-  }, [isInView, controls, imageControls]);
+  // No imperative effect needed — we'll use whileInView on the container to trigger
+  // the card stagger, and on the image with a transition.delay for the slight pause.
   const cards = [
     {
       id: 1,
@@ -102,12 +86,13 @@ export const AboutGraphic = () => {
   ];
 
   return (
-    <div ref={containerRef} className="flex gap-4 items-center ">
+    <div className="flex gap-4 items-center ">
       <motion.div
         className="w-full max-w-100 h-full self-stretch gap-12 flex flex-col items-start"
         variants={containerVariants}
         initial="hidden"
-        animate={controls}
+        whileInView="show"
+        viewport={{ once: true, amount: 0.8 }}
       >
         {cards.map((card) => (
           <motion.div
@@ -158,7 +143,9 @@ export const AboutGraphic = () => {
         className="h-full object-contain"
         variants={imageVariant}
         initial="hidden"
-        animate={imageControls}
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ delay: 2 }}
         alt="Agentic AI graphic"
       />
     </div>

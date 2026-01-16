@@ -187,7 +187,7 @@ const HeroSection = ({ className = "", ...props }) => {
         </motion.h1>
       </section>
       <motion.div
-        className="overflow-hidden flex w-full px-8 flex-col gap-1 lg:flex-row lg:justify-between"
+        className="overflow-hidden flex w-full px-8 flex-col gap-4 lg:flex-row lg:justify-between"
         variants={infoContainer}
         initial="hidden"
         whileInView="show"

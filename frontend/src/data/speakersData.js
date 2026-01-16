@@ -1,4 +1,5 @@
 import Panneerselvam from "../assets/speakerPhotos/Panneerselvam.svg";
+import amitabhkant from "../assets/speakerPhotos/amitabh kant.svg";
 import abhisheklal from "../assets/speakerPhotos/abishek lal.svg";
 import amangulati from "../assets/speakerPhotos/aman gulati.svg";
 import amitpradhan from "../assets/speakerPhotos/amit pradhan.svg";
@@ -31,6 +32,12 @@ import vinamramishra from "../assets/speakerPhotos/vinamra mishra.svg";
 import viveksaha from "../assets/speakerPhotos/vivek saha.svg";
 import yaduyadav from "../assets/speakerPhotos/yadu yadav.svg";
 export const speakersData = [
+  {
+    name: "Sh. Amitabh Kant",
+    title: "Ex-G20 Sherpa",
+    organization: "Government of India",
+    image: amitabhkant,
+  },
   {
     name: "Sh. Vinamra Mishra",
     title: "Director",

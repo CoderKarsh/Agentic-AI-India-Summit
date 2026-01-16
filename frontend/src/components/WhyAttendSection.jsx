@@ -136,7 +136,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           {themesData.map((theme, index) => (
