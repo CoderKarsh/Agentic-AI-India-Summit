@@ -98,6 +98,53 @@
   }
 }
 
+/* Image marquee styles */
+.marquee-outer {
+  position: relative;
+}
+.marquee-track {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  /* move left continuously */
+  animation-name: marquee-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-img {
+  width: auto;
+  height: 140px; /* default for small viewports */
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .marquee-img {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .marquee-img {
+    height: 300px; /* lg viewports: 300px */
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* Animations removed: keep keyframes and utility removed to disable fade-in animations */
 
 :root {

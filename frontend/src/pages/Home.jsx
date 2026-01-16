@@ -9,13 +9,15 @@ import { FutureSystemsCouncil } from "../components/FutureSystemsCouncil";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ImageMarquee from "../components/ImageMarquee";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
   return (
     <div className="bg-[#f2f2f2] w-full relative">
       <Header className="px-8" />
 
-      <main className="w-full space-y-30">
+      <main className="w-full space-y-15">
         <HeroSection />
         {/* <motion.div
           className=" bg-[linear-gradient(180deg,rgba(232,139,88,1)_0%,rgba(215,65,99,1)_48%,rgba(225,57,62,1)_100%)]"
@@ -25,6 +27,19 @@ const Home = () => {
           transition={{ duration: 0.6, ease: "easeInOut" }}
         > */}
         <AboutSection className="px-8 py-8" />
+        <div className="w-full py-8">
+          <Marquee className="">
+            <img src="/mi1.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi2.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi3.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi4.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi5.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi6.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi7.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi8.png" alt="" className="h-50 lg:h-75 mx-4" />
+            <img src="/mi9.png" alt="" className="h-50 lg:h-75 mx-4" />
+          </Marquee>
+        </div>
         {/* </motion.div> */}
         {/* <AgenticAIEconomy className="px-8 py-8" /> */}
         <WhyAttendSection className="px-8 py-8" />

@@ -73,9 +73,7 @@ const HeroSection = ({ className = "", ...props }) => {
                 {Array.from("Agentic ").map((ch, i) => (
                   <motion.span
                     key={i}
-                    className={`inline-block tracking-[-2.87px] ${
-                      i === 0 ? "ff-inter" : "ff-inter"
-                    }`}
+                    className={`inline-block tracking-[-2.87px] ff-inter`}
                     variants={{
                       hidden: { y: "110%" },
                       show: {
@@ -204,11 +202,11 @@ const HeroSection = ({ className = "", ...props }) => {
         </motion.p>
 
         <motion.div className="ff-inter text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25 flex flex-col lg:flex-row lg:w-[50%] lg:justify-between gap-0.5">
-          <motion.span variants={slideLeft} className="block">
-            Eros Hotel, <span className="ff-inter italic">New Delhi</span>
+          <motion.span variants={slideLeft} className="block font-medium">
+            Eros Hotel, New Delhi
           </motion.span>
-          <motion.span variants={slideLeft} className="block">
-            19 June, <span className="ff-inter italic">2026</span>
+          <motion.span variants={slideLeft} className="block font-medium">
+            19 June, 2026
           </motion.span>
         </motion.div>
       </motion.div>
