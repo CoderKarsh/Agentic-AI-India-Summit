@@ -41,32 +41,7 @@ const Header = ({ className = "", ...props }) => {
     >
       <nav className="relative flex max-w-300 items-center justify-between mx-auto py-4">
         <a href="#home">
-          <div className="relative flex flex-col gap-1.5 items-start justify-center ff-inter font-normal text-2xl tracking-[-1.68px] leading-6">
-            {/* First line: Agentic AI */}
-            <div className="flex items-baseline text-[44px]">
-              <span className="text-primary-pink tracking-[-0.40px] leading-[21.8px]">
-                A
-              </span>
-              <span className="ff-inter text-[#111111] tracking-[-0.40px] leading-[21.8px]">
-                g&nbsp;
-              </span>
-              <span className="text-primary-orange tracking-[-0.40px] leading-[21.8px]">
-                A
-              </span>
-              <span className="text-primary-red tracking-[-0.40px] leading-[21.8px]">
-                I&nbsp;
-              </span>
-            </div>
-            {/* Second line: India Summit */}
-            <div className="flex items-baseline">
-              <span className="ff-inter text-primary-orange tracking-[-0.40px] leading-[21.8px]">
-                s
-              </span>
-              <span className="ff-inter tracking-[-0.40px] leading-[21.8px]">
-                ummit
-              </span>
-            </div>
-          </div>
+          <img src="/Logo.svg" alt="" />
         </a>
 
         {/* desktop nav */}

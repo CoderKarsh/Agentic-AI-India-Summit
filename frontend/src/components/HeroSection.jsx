@@ -19,11 +19,10 @@ const HeroSection = ({ className = "", ...props }) => {
   return (
     <section
       id="home"
-      className={`flex flex-col w-full max-w-316 mx-auto items-start gap-4 py-8 ${className}`}
+      className={`flex flex-col w-full mx-auto items-start gap-4 py-2 ${className}`}
       {...props}
     >
-      <div className="relative flex flex-col items-end justify-end gap-2.5 md:mx-4 py-5 w-full md:rounded-[20px] overflow-hidden aspect-video">
-        {/* video element from public/IntroVideo.mp4; served at root */}
+      <div className="relative flex flex-col items-end justify-end gap-2.5 py-5 w-full  overflow-hidden aspect-video">
         <motion.video
           className="absolute inset-0 w-full h-full object-cover"
           initial={{ width: "0%" }}
@@ -41,13 +40,13 @@ const HeroSection = ({ className = "", ...props }) => {
         />
 
         {/* overlay content (button) sits above the video */}
-        <div className="relative z-10 w-full flex justify-end">
-          <button className="h-auto px-4 py-2 md:px-8 md:py-4 rounded-[120px] bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-90 transition-opacity ff-inter font-medium text-white text-sm md:text-base text-center tracking-[-0.32px] leading-[normal]">
+        {/* <div className="relative z-10 w-full flex justify-center">
+          <button className="h-auto px-4 py-2 md:px-8 md:py-4 bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-90 transition-opacity ff-inter font-medium text-white text-sm md:text-base text-center tracking-[-0.32px] leading-[normal]">
             Buy Tickets
           </button>
-        </div>
+        </div> */}
       </div>
-      <section className="flex flex-wrap lg:flex-nowrap items-end gap-8 px-8 lg:gap-28.75 w-full ">
+      <section className="flex  max-w-316 mx-auto flex-wrap lg:flex-nowrap items-end gap-8 px-8 lg:gap-28.75 w-full ">
         <motion.h1
           className="flex items-baseline justify-start flex-wrap ff-inter font-normal text-[#111111] text-[64px] md:text-8xl leading-none"
           initial="hidden"
@@ -164,7 +163,7 @@ const HeroSection = ({ className = "", ...props }) => {
                   },
                 }}
               >
-                {Array.from("summit ").map((ch, i) => (
+                {Array.from("Summit ").map((ch, i) => (
                   <motion.span
                     key={i}
                     className={`inline-block tracking-[-2.87px] ff-inter`}
@@ -185,7 +184,7 @@ const HeroSection = ({ className = "", ...props }) => {
         </motion.h1>
       </section>
       <motion.div
-        className="overflow-hidden flex w-full px-8 flex-col gap-4 lg:flex-row lg:justify-between"
+        className="overflow-hidden  max-w-316 mx-auto  flex w-full px-8 flex-col gap-4 lg:flex-row lg:justify-between"
         variants={infoContainer}
         initial="hidden"
         whileInView="show"

@@ -86,9 +86,9 @@ export const AboutGraphic = () => {
   ];
 
   return (
-    <div className="flex gap-4 items-center ">
+    <div className="flex gap-4 items-center justify-center w-full max-w-200 mx-auto px-4  lg:px-0 flex-row">
       <motion.div
-        className="w-full max-w-100 h-full self-stretch gap-12 flex flex-col items-start"
+        className="w-full max-w-200 h-full self-stretch gap-6 flex flex-col items-start"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -97,7 +97,8 @@ export const AboutGraphic = () => {
         {cards.map((card) => (
           <motion.div
             key={card.id}
-            className="relative self-stretch w-full h-full rounded-lg overflow-hidden"
+            /* give a sensible minimum height so cards are visible even when parent height is not set */
+            className="relative self-stretch w-full min-h-30 rounded-tl-3xl rounded-br-3xl overflow-hidden"
             variants={cardVariant}
           >
             <div

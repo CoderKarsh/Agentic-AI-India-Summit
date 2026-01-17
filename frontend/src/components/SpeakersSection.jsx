@@ -41,7 +41,7 @@ export const SpeakersSection = () => {
       <div className="relative max-w-316 mx-auto px-4">
         <h2 className="mb-8 ff-inter font-normal text-5xl tracking-[-3.36px] leading-12">
           <span className="ff-inter text-white tracking-[-1.61px]">
-            speakers
+            Speakers
           </span>
         </h2>
 

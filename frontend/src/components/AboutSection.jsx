@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { AboutGraphic } from "./AboutGraphic";
 
 export const AboutSection = ({ className = "", ...props }) => {
   return (
     <motion.section
       id="about"
-      className={`relative w-full max-w-316 mx-auto bg-[#f2f2f2] ${className}`}
+      className={`relative w-full max-w-316 mx-auto bg-[#f2f2f2] ${className} grid grid-cols-1 place-content-center lg:grid-cols-2 gap-8 py-4`}
       {...props}
     >
       <div className="relative z-10 flex flex-col gap-6">
@@ -18,7 +17,7 @@ export const AboutSection = ({ className = "", ...props }) => {
         >
           About the Summit
         </motion.h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full place-content-center">
+        <div className="w-full place-content-center">
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,9 +60,13 @@ export const AboutSection = ({ className = "", ...props }) => {
             />
           </motion.div>
            */}
-          <AboutGraphic />
         </div>
       </div>
+      <img
+        src="/p1 (12).png"
+        alt="About visual"
+        className="h-full w-full object-cover"
+      />
     </motion.section>
   );
 };
