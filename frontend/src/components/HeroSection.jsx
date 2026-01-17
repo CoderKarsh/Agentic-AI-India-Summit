@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { DateAndLocation } from "./DateandLocation";
 
 const HeroSection = ({ className = "", ...props }) => {
   const infoContainer = {
@@ -46,6 +47,7 @@ const HeroSection = ({ className = "", ...props }) => {
           </button>
         </div> */}
       </div>
+      {/* Heading */}
       <section className="flex  max-w-316 mx-auto flex-wrap lg:flex-nowrap items-end gap-8 px-8 lg:gap-28.75 w-full ">
         <motion.h1
           className="flex items-baseline justify-start flex-wrap ff-inter font-normal text-[#111111] text-[64px] md:text-8xl leading-none"
@@ -199,16 +201,10 @@ const HeroSection = ({ className = "", ...props }) => {
           </span>
           <span className="ff-inter italic">Autonomous Intelligence</span>
         </motion.p>
-
-        <motion.div className="ff-inter text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25 flex flex-col lg:flex-row lg:w-[50%] lg:justify-between gap-0.5">
-          <motion.span variants={slideLeft} className="block font-medium">
-            Eros Hotel, New Delhi
-          </motion.span>
-          <motion.span variants={slideLeft} className="block font-medium">
-            19 June, 2026
-          </motion.span>
-        </motion.div>
       </motion.div>
+      {/* <motion.div className="ff-inter max-w-316 mx-auto text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25 flex flex-col lg:flex-row lg:w-[50%] lg:justify-between gap-0.5">
+      </motion.div> */}
+      <DateAndLocation />
     </section>
   );
 };

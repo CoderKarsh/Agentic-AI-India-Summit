@@ -59,7 +59,7 @@ export const EventNumbers = () => {
             key={stat.id}
             className="relative flex items-end justify-center w-fit ff-inter font-normal text-white text-[64px] tracking-[0] leading-16"
           >
-            <p className="flex flex-col items-center">
+            <p className="flex flex-col items-start">
               <span className="font-medium">
                 <CountUp value={stat.number} />
               </span>
