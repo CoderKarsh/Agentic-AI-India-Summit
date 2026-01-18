@@ -51,6 +51,26 @@ const Header = ({ className = "", ...props }) => {
             if (item.href.includes("#")) {
               // if we're on the home page, intercept and smooth-scroll in-page
               if (location.pathname === "/" || location.pathname === "") {
+                // special CTAs: pill styling
+                if (
+                  item.label === "Buy Tickets" ||
+                  item.label === "Become a sponsor"
+                ) {
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href.replace("/", "")}
+                      onClick={(e) => {
+                        handleNavClick(e, item.href.replace("/", ""));
+                        setOpen(false);
+                      }}
+                      className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full hover: bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)]   hover:opacity-95 cursor-pointer"
+                    >
+                      {item.label}
+                    </a>
+                  );
+                }
+
                 return (
                   <a
                     key={item.label}
@@ -67,6 +87,23 @@ const Header = ({ className = "", ...props }) => {
               }
 
               // otherwise, navigate using router Link so ScrollToHash can run after navigation
+              // CTAs should be emphasized as pills even when navigating away
+              if (
+                item.label === "Buy Tickets" ||
+                item.label === "Become a sponsor"
+              ) {
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setOpen(false)}
+                    className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-95"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              }
+
               return (
                 <Link
                   key={item.label}
@@ -80,6 +117,22 @@ const Header = ({ className = "", ...props }) => {
             }
 
             // no hash: normal route link
+            if (
+              item.label === "Buy Tickets" ||
+              item.label === "Become a sponsor"
+            ) {
+              return (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onClick={() => setOpen(false)}
+                  className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-95"
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
             return (
               <Link
                 key={item.label}
@@ -133,6 +186,42 @@ const Header = ({ className = "", ...props }) => {
           <div className="md:hidden absolute right-4 top-full mt-2 w-48 bg-white rounded-md shadow-lg z-50">
             <div className="flex flex-col p-2">
               {navItems.map((item) => {
+                // Emphasize CTAs in mobile menu as pill buttons that stand out
+                if (
+                  item.label === "Buy Tickets" ||
+                  item.label === "Become a sponsor"
+                ) {
+                  if (
+                    item.href.includes("#") &&
+                    (location.pathname === "/" || location.pathname === "")
+                  ) {
+                    return (
+                      <a
+                        key={item.label}
+                        href={item.href.replace("/", "")}
+                        onClick={(e) => {
+                          handleNavClick(e, item.href.replace("/", ""));
+                          setOpen(false);
+                        }}
+                        className="ff-inter text-white px-4 py-3 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] text-center mb-2"
+                      >
+                        {item.label}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      onClick={() => setOpen(false)}
+                      className="ff-inter text-white px-4 py-3 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] text-center mb-2"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
+
                 if (item.href.includes("#")) {
                   if (location.pathname === "/" || location.pathname === "") {
                     return (

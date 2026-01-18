@@ -1,55 +1,64 @@
 const attendeeTypes = [
   {
     text: "Enterprise CXOs",
-    bgColor: "bg-[#e35877]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e35877]",
     rounded: "rounded-[140px]",
     animationDelay: "200ms",
   },
   {
     text: "Business Decision Makers",
-    bgColor: "bg-[#e1393e]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e1393e]",
     rounded: "rounded-[140px]",
     animationDelay: "200ms",
   },
   {
     text: "Policy and Governance Leaders",
-    bgColor: "bg-[#e88b58]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e88b58]",
     rounded: "rounded-[0px_140px_140px_0px]",
     animationDelay: "300ms",
   },
   {
     text: "Industry and Industrial Leaders",
-    bgColor: "bg-[#e1393e]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e1393e]",
     rounded: "rounded-[0px_140px_140px_0px]",
     animationDelay: "400ms",
   },
   {
     text: "Investors and Strategy Leaders",
-    bgColor: "bg-[#e1393e]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e1393e]",
     rounded: "rounded-[140px]",
     animationDelay: "500ms",
   },
   {
     text: "Technology and Platform Builders",
-    bgColor: "bg-[#e35877]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e35877]",
     rounded: "rounded-[0px_140px_140px_0px]",
     animationDelay: "600ms",
   },
   {
     text: "Startup Founders",
-    bgColor: "bg-[#e88b58]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e88b58]",
     rounded: "rounded-[0px_140px_140px_0px]",
     animationDelay: "700ms",
   },
   {
     text: "Scaleup Leaders",
-    bgColor: "bg-[#e1393e]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e1393e]",
     rounded: "rounded-[0px_140px_140px_0px]",
     animationDelay: "700ms",
   },
   {
     text: "Skilling and Workforce Leaders",
-    bgColor: "bg-[#e35877]",
+    bgColor: "bg-[#f2f2f2]",
+    strokeColor: "border-[#e35877]",
     rounded: "rounded-[140px]",
     animationDelay: "800ms",
   },
@@ -95,7 +104,11 @@ export const WhoShouldAttendSection = ({ className = "", ...props }) => {
         {attendeeTypes.map((attendee, index) => (
           <motion.div
             key={index}
-            className={` px-10 py-5  ${attendee.bgColor} -ml-15 rounded-[140px] shadow-[inset_0px_4px_4px_#0000001a] text-white text-sm lg:text-xl text-right tracking-[0] leading-[normal] whitespace-nowrap ff-inter font-normal`}
+            className={`z-${index + 100} px-10 py-5  ${
+              attendee.bgColor
+            } -ml-15 border-3 ${
+              attendee.strokeColor
+            } rounded-[140px] shadow-[inset_0px_4px_4px_#0000001a] text-[#111111] text-sm lg:text-xl text-right tracking-[0] leading-[normal] whitespace-nowrap ff-inter font-normal`}
             variants={{
               hidden: { x: -300 },
               show: { x: 0, transition: { duration: 0.45, ease: "easeOut" } },

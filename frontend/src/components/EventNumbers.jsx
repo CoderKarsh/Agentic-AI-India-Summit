@@ -40,15 +40,15 @@ function CountUp({ value, className = "" }) {
 
 export const EventNumbers = () => {
   const stats = [
-    { id: 1, number: "40+", label: "SPEAKERS" },
-    { id: 2, number: "300+", label: "ATTENDEES" },
-    { id: 3, number: "09", label: "TRACKS" },
+    { id: 1, number: "40+", label: "SPEAKERS", color: "text-[#E88B58]" },
+    { id: 2, number: "300+", label: "ATTENDEES", color: "text-[#E35877]" },
+    { id: 3, number: "09", label: "TRACKS", color: "text-[#E1393E]" },
   ];
 
   return (
-    <section className="my-8 flex flex-col w-full items-start justify-center gap-2.5 px-8 py-15 relative bg-[linear-gradient(90deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_50%,rgba(225,57,62,1)_100%)]">
+    <section className="my-8 flex flex-col w-full items-start justify-center gap-2.5 px-8 py-8 relative">
       <div className="flex flex-col gap-16 lg:flex-row items-center justify-between max-w-316 mx-auto relative self-stretch w-full flex-[0_0_auto]">
-        <h2 className="relative flex items-end justify-center w-fit -mt-px ff-inter font-semibold italic text-white text-5xl tracking-[0] leading-12">
+        <h2 className="relative flex items-end justify-center w-fit -mt-px ff-inter font-semibold italic text-[#111111] text-5xl tracking-[0] leading-12">
           Exciting
           <br />
           Numbers!
@@ -57,10 +57,10 @@ export const EventNumbers = () => {
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className="relative flex items-end justify-center w-fit ff-inter font-normal text-white text-[64px] tracking-[0] leading-16"
+            className="relative flex items-end justify-center w-fit ff-inter font-normal text-[#111111] text-[64px] tracking-[0] leading-16"
           >
             <p className="flex flex-col items-start">
-              <span className="font-medium">
+              <span className={`font-medium ${stat.color}`}>
                 <CountUp value={stat.number} />
               </span>
               <span className="ff-inter text-2xl leading-6">{stat.label}</span>
