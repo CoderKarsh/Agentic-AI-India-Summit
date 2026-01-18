@@ -42,7 +42,7 @@ export const EventNumbers = () => {
   const stats = [
     { id: 1, number: "40+", label: "SPEAKERS" },
     { id: 2, number: "300+", label: "ATTENDEES" },
-    { id: 3, number: "08", label: "TRACKS" },
+    { id: 3, number: "09", label: "TRACKS" },
   ];
 
   return (

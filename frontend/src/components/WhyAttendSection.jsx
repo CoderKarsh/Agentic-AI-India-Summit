@@ -8,35 +8,40 @@ import Marquee from "react-fast-marquee";
 const themesData = [
   {
     number: "1",
-    title: "What Comes After GenAI: Next-Generation Agentic AI Architectures",
+    title: "From Prompting to Performing: Building the Autonomous Enterprise",
   },
   {
     number: "2",
-    title: "Scalable, Safe and Governable Agentic AI",
+    title: "India’s Sovereign Agentic AI Strategy",
   },
   {
     number: "3",
-    title: "Policy, Regulation, and Enterprise Technology Alignment",
+    title: "From Proof-of-Concept to Production at Scale",
   },
   {
     number: "4",
-    title: "From Models to Enterprise-Wide Autonomous Systems",
+    title: "The Future of Work: Managing the Human–Agent Workforce",
   },
   {
     number: "5",
-    title: "Agentic AI for Measurable Industrial and Business Impact",
+    title: "Empowering India’s 603 Million MSMEs Through Agentic AI",
   },
   {
     number: "6",
-    title: "Build, Validate, and Scale Agentic AI Solutions (Startups)",
+    title: "Technology Deep Dive: Building Multi-Agent Enterprise Stacks",
   },
   {
     number: "7",
-    title: "Preparing Organizations and the Agentic Workforce",
+    title: "Security, Guardrails & Governance for Agentic AI",
   },
   {
     number: "8",
-    title: "Peer-to-Peer Exchange Among Builders and Decision Makers",
+    title: "Startup Showcase & Pitch: Building the Next Wave of Agentic AI",
+  },
+  {
+    number: "9",
+    title:
+      "Beyond the Browser: Agentic AI in Hardware, Edge & Physical Systems",
   },
 ];
 
@@ -101,6 +106,58 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
     >
+      {/* THEMES */}
+      <motion.div
+        className="flex flex-col items-start gap-6 w-full px-8  max-w-316 mx-auto py-8"
+        variants={text}
+      >
+        <h3 className="self-stretch text-5xl font-normal text-[#111111] leading-8 ff-inter tracking-[-1.76px]">
+          Tracks
+        </h3>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          {themesData.map((theme, index) => (
+            <motion.div key={index} variants={item}>
+              <Card className="h-[156px] bg-[#E1393E] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0">
+                <CardContent className="relative w-full h-full p-0">
+                  <motion.div
+                    className="flex w-full h-full items-center gap-2.5 absolute top-0 left-0"
+                    variants={stripesContainer}
+                  >
+                    {Array.from({ length: 22 }).map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="flex-1 self-stretch bg-[#d22d33]"
+                        variants={stripe}
+                      />
+                    ))}
+                  </motion.div>
+
+                  <div className="absolute top-5 left-1 ff-inter font-medium text-[#ff890b] text-9xl tracking-[0] leading-[211.2px] whitespace-nowrap overflow-hidden">
+                    <motion.div className="inline-block" variants={numberInner}>
+                      {theme.number}
+                    </motion.div>
+                  </div>
+
+                  <motion.div
+                    className="absolute top-[29px] left-[86px] right-4 ff-inter font-semibold text-white text-xl tracking-[-0.80px] leading-7"
+                    variants={titleVariant}
+                  >
+                    {theme.title}
+                  </motion.div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
       <div className=" max-w-316 px-8 mx-auto flex flex-col lg:flex-row justify-between gap-8 w-full items-center">
         <motion.header
           className="flex flex-col w-full items-start gap-6"
@@ -212,59 +269,6 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
         </Marquee>
       </div>
       <EventNumbers />
-
-      {/* THEMES */}
-      <motion.div
-        className="flex flex-col items-start gap-6 w-full px-8  max-w-316 mx-auto py-8"
-        variants={text}
-      >
-        <h3 className="self-stretch text-5xl font-normal text-[#111111] leading-8 ff-inter tracking-[-0.72px]">
-          Themes
-        </h3>
-
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          {themesData.map((theme, index) => (
-            <motion.div key={index} variants={item}>
-              <Card className="h-[156px] bg-[#E1393E] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0">
-                <CardContent className="relative w-full h-full p-0">
-                  <motion.div
-                    className="flex w-full h-full items-center gap-2.5 absolute top-0 left-0"
-                    variants={stripesContainer}
-                  >
-                    {Array.from({ length: 22 }).map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="flex-1 self-stretch bg-[#d22d33]"
-                        variants={stripe}
-                      />
-                    ))}
-                  </motion.div>
-
-                  <div className="absolute top-5 left-1 ff-inter font-medium text-[#ff890b] text-9xl tracking-[0] leading-[211.2px] whitespace-nowrap overflow-hidden">
-                    <motion.div className="inline-block" variants={numberInner}>
-                      {theme.number}
-                    </motion.div>
-                  </div>
-
-                  <motion.div
-                    className="absolute top-[29px] left-[86px] right-4 ff-interfont-semibold text-white text-xl tracking-[-0.80px] leading-7"
-                    variants={titleVariant}
-                  >
-                    {theme.title}
-                  </motion.div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
     </motion.section>
   );
 };
