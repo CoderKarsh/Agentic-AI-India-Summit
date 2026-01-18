@@ -54,7 +54,7 @@ export const DateAndLocation = () => {
       </div>
 
       <img
-        className="relative self-stretch w-full h-7.5 -mt-0.75"
+        className="relative self-stretch w-full h-7.5 -mt-0.75 rotate-180"
         alt=""
         src={containingLine}
         role="presentation"

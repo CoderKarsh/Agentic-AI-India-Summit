@@ -9,7 +9,7 @@ export const AboutSection = ({ className = "", ...props }) => {
     >
       <div className="relative z-10 flex flex-col gap-6">
         <motion.h2
-          className="ff-inter font-normal text-[#111111] text-5xl leading-[48px] tracking-[0"
+          className="ff-inter font-normal text-[#111111] text-5xl leading-12 tracking-[0"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -25,21 +25,23 @@ export const AboutSection = ({ className = "", ...props }) => {
             transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
             className="ff-inter font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px] w-full"
           >
-            The Agentic AI India Summit is a one-stop platform to understand the
-            future of Agentic AI technologies and how they will shape the next
-            phase of the AI-driven economy. <br />
-            At its core, the summit focuses on Agentic AI
-            technologies—autonomous agents, decision-driven systems, and
-            multi-agent architectures—explaining how these systems will evolve,
-            operate, and scale in real-world environments. It highlights what
-            Agentic AI holds for startups, how new products and business models
-            are emerging, and how innovation can scale from startups to MSMEs
-            and enterprises. The summit also brings forward the government and
-            policy perspective, outlining the support frameworks, incentives,
-            and enablers that will drive responsible adoption, large-scale
-            deployment, and workforce readiness—creating a clear view of how
-            technology, innovation, scale, policy, and skills come together to
-            define India’s Agentic AI future.
+            Agentic AI represents the next architectural leap in artificial
+            intelligence, redefining how AI systems reason, decide, and act as
+            autonomous systems. Moving beyond model-centric intelligence, it
+            enables system-level autonomy through goal-driven agents that can
+            reason, plan, execute actions, coordinate across multi-agent
+            environments, and continuously adapt within complex, dynamic
+            conditions. <br />
+            The Agentic AI India Summit is a platform where core Agentic AI
+            technologies are discussed to define the future direction across
+            sectors. It sets clarity on how autonomous systems and agent-driven
+            architectures will shape industries, from enterprises to national
+            digital infrastructure. <br />
+            It also defines the pathway for the next generation of startups and
+            the future skills required to build, deploy, and govern Agentic AI
+            systems. Government leaders outline the policy frameworks,
+            incentives, and support mechanisms designed to accelerate adoption,
+            enable scale, and strengthen the evolving Agentic AI ecosystem.
           </motion.p>
           {/* <motion.div
             initial={{ opacity: 0, y: 24 }}

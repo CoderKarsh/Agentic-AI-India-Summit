@@ -4,7 +4,7 @@ const navItems = [
   { label: "About", href: "/#about" },
   { label: "Speakers", href: "/#speakers" },
   { label: "Committee", href: "/#committee" },
-  { label: "Buy a ticket", href: "/tickets" },
+  { label: "Buy Tickets", href: "/tickets" },
   { label: "Become a sponsor", href: "/sponsor" },
 ];
 
