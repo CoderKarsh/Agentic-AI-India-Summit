@@ -18,7 +18,7 @@ export const DateAndLocation = () => {
       aria-label="Event Date and Location"
     >
       <img
-        className="relative self-stretch w-full h-[30px] mt-[-3.00px]"
+        className="relative self-stretch w-full h-7.5 -mt-0.75"
         alt=""
         src={containingLine}
         role="presentation"
@@ -26,8 +26,8 @@ export const DateAndLocation = () => {
 
       <div className="flex w-full mx-auto items-center gap-8 px-8 py-0 relative flex-[0_0_auto]">
         <div className="relative flex items-end justify-center flex-1">
-          <p className="ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] leading-[48px]">
-            <span className="ff-inter font-medium text-[#111111] text-5xl tracking-[0] leading-[48px]">
+          <p className="ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] leading-12">
+            <span className="ff-inter font-medium text-[#111111] text-5xl tracking-[0] leading-12">
               {locationData.venue}
               <br />
             </span>
@@ -36,15 +36,15 @@ export const DateAndLocation = () => {
         </div>
 
         <img
-          className="relative w-[3px] h-[136px]"
+          className="relative w-0.75 h-34"
           alt=""
           src={divider}
           role="presentation"
         />
 
         <div className="relative flex items-end justify-center flex-1">
-          <p className="ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] leading-[48px]">
-            <span className="ff-inter font-medium text-[#111111] text-5xl tracking-[0] leading-[48px]">
+          <p className="ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] leading-12">
+            <span className="ff-inter font-medium text-[#111111] text-5xl tracking-[0] leading-12">
               {dateData.day}
               <br />
             </span>
@@ -54,7 +54,7 @@ export const DateAndLocation = () => {
       </div>
 
       <img
-        className="relative self-stretch w-full h-[30px] mt-[-3.00px]"
+        className="relative self-stretch w-full h-7.5 -mt-0.75"
         alt=""
         src={containingLine}
         role="presentation"
