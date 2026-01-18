@@ -8,7 +8,6 @@ import { StrategicAdvisoryBoardSection } from "../components/StrategicAdvisoryBo
 import { FutureSystemsCouncil } from "../components/FutureSystemsCouncil";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ImageMarquee from "../components/ImageMarquee";
 import Marquee from "react-fast-marquee";
 
 const Home = () => {

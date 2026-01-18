@@ -1,5 +1,7 @@
 import { Card, CardContent } from "./ui/Card";
 import { EventNumbers } from "./EventNumbers";
+import { WhyAttendCards } from "./WhyAttendCards";
+import InsightsDialogueConnection from "./InsightsDialogueConnection";
 
 const themesData = [
   {
@@ -95,7 +97,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <div className=" max-w-316 px-8 mx-auto flex flex-col lg:flex-row justify-between gap-8 w-full items-center">
         <motion.header
@@ -122,11 +124,13 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
             future, governance, and impact.
           </motion.p>
         </motion.header>
-        <img src="/WhyAttendPhotos.png" alt="" className="lg:max-w-125" />
       </div>
 
+      <WhyAttendCards className="py-20" />
+      <InsightsDialogueConnection />
       <EventNumbers />
 
+      {/* THEMES */}
       <motion.div
         className="flex flex-col items-start gap-6 w-full px-8  max-w-316 mx-auto py-8"
         variants={text}
