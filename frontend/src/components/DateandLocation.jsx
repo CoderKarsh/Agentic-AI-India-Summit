@@ -24,7 +24,7 @@ export const DateAndLocation = () => {
         role="presentation"
       />
 
-      <div className="flex w-[700px] mx-auto items-center gap-8 px-[66px] py-0 relative flex-[0_0_auto]">
+      <div className="flex w-full mx-auto items-center gap-8 px-8 py-0 relative flex-[0_0_auto]">
         <div className="relative flex items-end justify-center flex-1">
           <p className="ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] leading-[48px]">
             <span className="ff-inter font-medium text-[#111111] text-5xl tracking-[0] leading-[48px]">
