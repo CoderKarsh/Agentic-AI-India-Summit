@@ -18,8 +18,8 @@ const Home = () => {
       <main className="w-full space-y-15">
         <HeroSection />
         <AboutSection className="px-8" />
-        <AboutGraphic />
-        <div className="w-full py-8">
+        {/* <AboutGraphic /> */}
+        {/* <div className="w-full py-8">
           <Marquee>
             <img src="/p1 (1).png" alt="" className="h-50 lg:h-75 mx-4" />
             <img src="/p1 (2).png" alt="" className="h-50 lg:h-75 mx-4" />
@@ -36,13 +36,13 @@ const Home = () => {
             <img src="/p1 (13).png" alt="" className="h-50 lg:h-75 mx-4" />
             <img src="/p1 (14).png" alt="" className="h-50 lg:h-75 mx-4" />
           </Marquee>
-        </div>
+        </div> */}
 
         {/* </motion.div> */}
         {/* <AgenticAIEconomy className="px-8 py-8" /> */}
         <WhyAttendSection className=" py-8" />
         <WhoShouldAttendSection className="px-8 py-8" />
-        <div className="w-full py-8">
+        {/* <div className="w-full py-8">
           <Marquee className="">
             <img src="/mi1.png" alt="" className="h-50 lg:h-75 mx-4" />
             <img src="/mi2.png" alt="" className="h-50 lg:h-75 mx-4" />
@@ -54,7 +54,7 @@ const Home = () => {
             <img src="/mi8.png" alt="" className="h-50 lg:h-75 mx-4" />
             <img src="/mi9.png" alt="" className="h-50 lg:h-75 mx-4" />
           </Marquee>
-        </div>
+        </div> */}
 
         <div id="speakers">
           <SpeakersSection className="" />
