@@ -28,7 +28,7 @@ export default function InsightsDialogueConnection({
   const src = isLarge ? "/EventCollageL.svg" : "/EventCollageP.svg";
 
   return (
-    <div className={className} {...props}>
+    <div className={`mx-auto ${className}`} {...props}>
       <img src={src} alt={alt} className="w-full h-auto block" />
     </div>
   );

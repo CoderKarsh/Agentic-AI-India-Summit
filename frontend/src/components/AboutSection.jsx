@@ -9,7 +9,7 @@ export const AboutSection = ({ className = "", ...props }) => {
     >
       <div className="relative z-10 flex flex-col gap-6">
         <motion.h2
-          className="ff-inter font-normal text-[#111111] text-5xl leading-12 tracking-[0"
+          className="ff-inter font-normal text-[#111111] text-5xl leading-12 tracking-[-1.6px]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

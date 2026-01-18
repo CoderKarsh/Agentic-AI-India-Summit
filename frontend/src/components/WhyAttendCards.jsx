@@ -44,12 +44,12 @@ export const WhyAttendCards = ({ className = "", ...props }) => {
 
   const cardVariant = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    show: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
   };
 
   return (
     <motion.div
-      className={`flex flex-col lg:flex-row items-stretch gap-4 relative max-w-125 lg:max-w-330 mx-auto ${className}`}
+      className={`flex px-8 flex-col lg:flex-row items-stretch gap-4 relative max-w-125 lg:max-w-330 mx-auto ${className}`}
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
@@ -78,7 +78,7 @@ export const WhyAttendCards = ({ className = "", ...props }) => {
               <img src={card.iconImage} alt="icon" className="w-10 h-10" />
             </div>
 
-            <p className=" text-center ff-inter font-normal text-neutral-700 lg:text-lg tracking-[-0.40px] leading-7 wrap-break-word">
+            <p className=" text-center ff-inter font-normal text-[#111111CC]  lg:text-lg tracking-[-0.40px] leading-7 wrap-break-word">
               {card.text}
             </p>
           </div>

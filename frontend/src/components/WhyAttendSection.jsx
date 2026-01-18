@@ -105,13 +105,10 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
           variants={headerVariant}
         >
           <motion.h2
-            className="self-stretch ff-inter font-normal text-[#111111] text-5xl tracking-[-3.36px] leading-[48px]"
+            className="self-stretch ff-inter font-normal text-[#111111] text-5xl tracking-[-1.6px] leading-[48px]"
             variants={text}
           >
-            <span className="tracking-[-1.61px]">W</span>
-            <span className="ff-inter tracking-[-1.61px]">hy</span>
-            <span className="tracking-[-1.61px]"> a</span>
-            <span className="ff-inter tracking-[-1.61px]">ttend?</span>
+            Why Attend?
           </motion.h2>
           <motion.p
             className="max-w-[687px] ff-inter font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px]"

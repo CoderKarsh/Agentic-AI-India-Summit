@@ -80,7 +80,7 @@ export const SpeakersSection = () => {
                       />
                     </motion.div>
 
-                    <motion.div className="flex flex-col gap-4">
+                    <motion.div className="flex flex-col gap-2 lg:gap-4">
                       <h3 className="ff-inter font-semibold text-white text-base md:text-xl tracking-[-1.20px] leading-6">
                         {speaker.name}
                       </h3>
