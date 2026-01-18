@@ -8,7 +8,6 @@ import { StrategicAdvisoryBoardSection } from "../components/StrategicAdvisoryBo
 import { FutureSystemsCouncil } from "../components/FutureSystemsCouncil";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Marquee from "react-fast-marquee";
 
 const Home = () => {
   return (
@@ -19,24 +18,6 @@ const Home = () => {
         <HeroSection />
         <AboutSection className="px-8" />
         {/* <AboutGraphic /> */}
-        {/* <div className="w-full py-8">
-          <Marquee>
-            <img src="/p1 (1).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (2).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (3).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (4).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (5).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (6).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (7).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (8).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (9).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (10).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (11).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (12).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (13).png" alt="" className="h-50 lg:h-75 mx-4" />
-            <img src="/p1 (14).png" alt="" className="h-50 lg:h-75 mx-4" />
-          </Marquee>
-        </div> */}
 
         {/* </motion.div> */}
         {/* <AgenticAIEconomy className="px-8 py-8" /> */}

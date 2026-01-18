@@ -1,7 +1,9 @@
 import { Card, CardContent } from "./ui/Card";
 import { EventNumbers } from "./EventNumbers";
 import { WhyAttendCards } from "./WhyAttendCards";
-import InsightsDialogueConnection from "./InsightsDialogueConnection";
+import Marquee from "react-fast-marquee";
+
+// import InsightsDialogueConnection from "./InsightsDialogueConnection";
 
 const themesData = [
   {
@@ -124,7 +126,91 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
       </div>
 
       <WhyAttendCards className="py-20" />
-      <InsightsDialogueConnection />
+      {/* <InsightsDialogueConnection /> */}
+      <div className="w-full py-8">
+        <Marquee>
+          <img
+            src="/marquee/Insights/1.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Insights/2.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Insights/3.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Insights/4.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Insights/5.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Insights/6.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Insights/7.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Dialogue/1.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Dialogue/2.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Dialogue/3.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Dialogue/4.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Connection/1.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Connection/2.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Connection/3.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Connection/4.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+          <img
+            src="/marquee/Connection/5.svg"
+            alt=""
+            className="h-50 lg:h-75 mx-4"
+          />
+        </Marquee>
+      </div>
       <EventNumbers />
 
       {/* THEMES */}
