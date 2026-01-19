@@ -26,7 +26,7 @@ export const SpeakersSection = () => {
 
   return (
     <motion.section
-      className="relative w-full overflow-hidden bg-[#e1393e] py-16"
+      className="relative w-full overflow-hidden bg-[#D63500] py-16"
       variants={container}
       initial="hidden"
       whileInView="show"

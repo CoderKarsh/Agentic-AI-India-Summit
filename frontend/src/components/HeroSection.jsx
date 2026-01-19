@@ -133,10 +133,10 @@ const HeroSection = ({ className = "", ...props }) => {
                   },
                 }}
               >
-                {Array.from("India ").map((ch, i) => (
+                {Array.from("Bharat ").map((ch, i) => (
                   <motion.span
                     key={i}
-                    className={`inline-block tracking-[-2.87px] ${
+                    className={`inline-block tracking-[-2.87px] text-[#D63500] ${
                       i === 0 ? "ff-inter" : "ff-inter"
                     }`}
                     variants={{

@@ -99,7 +99,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
 
   return (
     <motion.section
-      className={`flex flex-col w-full  mx-auto items-start gap-4 py-8 ${className}`}
+      className={`flex flex-col w-full mx-auto items-start py-8 ${className}`}
       {...props}
       variants={container}
       initial="hidden"
@@ -108,7 +108,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
     >
       {/* THEMES */}
       <motion.div
-        className="flex flex-col items-start gap-6 w-full px-8  max-w-316 mx-auto py-8"
+        className="flex flex-col items-start gap-6 w-full px-8 mb-20 max-w-316 mx-auto py-8"
         variants={text}
       >
         <h3 className="self-stretch text-5xl font-normal text-[#111111] leading-8 ff-inter tracking-[-1.76px]">
@@ -125,7 +125,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
         >
           {themesData.map((theme, index) => (
             <motion.div key={index} variants={item}>
-              <Card className="h-[156px] bg-[#E1393E] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0">
+              <Card className="h-[156px] bg-[#D63500] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0">
                 <CardContent className="relative w-full h-full p-0">
                   <motion.div
                     className="flex w-full h-full items-center gap-2.5 absolute top-0 left-0"
@@ -134,7 +134,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
                     {Array.from({ length: 22 }).map((_, i) => (
                       <motion.div
                         key={i}
-                        className="flex-1 self-stretch bg-[#d22d33]"
+                        className="flex-1 self-stretch bg-[#00000011]"
                         variants={stripe}
                       />
                     ))}
@@ -158,19 +158,20 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
           ))}
         </motion.div>
       </motion.div>
-      <div className=" max-w-316 px-8 mx-auto flex flex-col lg:flex-row justify-between gap-8 w-full items-center">
+      {/* WHY ATTEND TEXT */}
+      <div className="bg-[#D63500] px-8 py-8 flex flex-col lg:flex-row justify-between gap-8 w-full items-center">
         <motion.header
-          className="flex flex-col w-full items-start gap-6"
+          className="max-w-316 mx-auto px-8 flex flex-col w-full items-start gap-6"
           variants={headerVariant}
         >
           <motion.h2
-            className="self-stretch ff-inter font-normal text-[#111111] text-5xl tracking-[-1.6px] leading-[48px]"
+            className="self-stretch ff-inter font-normal text-white text-5xl tracking-[-1.6px] leading-[48px]"
             variants={text}
           >
             Why Attend?
           </motion.h2>
           <motion.p
-            className="max-w-[687px] ff-inter font-normal text-neutral-700 text-base tracking-[0] leading-[26.4px]"
+            className="max-w-[687px] ff-inter font-normal text-[#FEFEFE] text-base tracking-[0] leading-[26.4px]"
             variants={text}
           >
             The Agentic AI India Summit is for those wanting to learn from
@@ -182,7 +183,10 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
         </motion.header>
       </div>
 
-      <WhyAttendCards className="py-20" />
+      {/* WHY ATTEND CARDS */}
+      <div className="w-full bg-[#D63500]">
+        <WhyAttendCards className=" py-20" />
+      </div>
       {/* <InsightsDialogueConnection /> */}
       <div className="w-full py-8">
         <Marquee>

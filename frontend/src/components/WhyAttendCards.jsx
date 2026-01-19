@@ -12,28 +12,28 @@ export const WhyAttendCards = ({ className = "", ...props }) => {
       backgroundImage: cardTextArea,
       iconBackground: "bg-[#e1393e]",
       iconImage: vector,
-      text: "Direct insights from industry and technology leaders on how Agentic AI is reshaping industries",
+      text: "Direct insights from industry leaders",
     },
     {
       id: 2,
       backgroundImage: cardTextArea,
       iconBackground: "bg-[#e88b58]",
       iconImage: vector2,
-      text: "Visibility into high-growth startup opportunities, shared by founders, investors, and platform builders",
+      text: "Visibility into high-growth startup opportunities",
     },
     {
       id: 3,
       backgroundImage: cardTextArea,
       iconBackground: "bg-[#e35877]",
       iconImage: vector3,
-      text: "Understanding of how MSMEs accelerate adoption and scale for Agentic AI startups",
+      text: "Understanding of how MSMEs scale Agentic AI startups",
     },
     {
       id: 4,
       backgroundImage: cardTextArea,
       iconBackground: "bg-[#e1393e]",
       iconImage: vector4,
-      text: "Real-world execution and adoption journeys from live deployments across sectors",
+      text: "Real-world execution and adoption journeys",
     },
   ];
 
@@ -62,7 +62,9 @@ export const WhyAttendCards = ({ className = "", ...props }) => {
           className="flex-1 min-w-0"
           variants={cardVariant}
         >
-          <div className="relative bg-white rounded-xl shadow p-6 pt-10 h-full">
+          <div
+            className={`relative bg-[#F64D15] rounded-xl shadow p-6 pt-10 h-full`}
+          >
             {/* keep decorative asset if present but hidden by default */}
             <img
               src={card.backgroundImage}
@@ -78,7 +80,7 @@ export const WhyAttendCards = ({ className = "", ...props }) => {
               <img src={card.iconImage} alt="icon" className="w-10 h-10" />
             </div>
 
-            <p className=" text-center ff-inter font-normal text-[#111111CC]  lg:text-lg tracking-[-0.40px] leading-7 wrap-break-word">
+            <p className=" text-center ff-inter font-medium text-[#FEFEFE] text-lg  lg:text-xl tracking-[-0.40px] leading-7 wrap-break-word">
               {card.text}
             </p>
           </div>

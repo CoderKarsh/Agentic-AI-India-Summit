@@ -21,7 +21,7 @@ const Home = () => {
 
         {/* </motion.div> */}
         {/* <AgenticAIEconomy className="px-8 py-8" /> */}
-        <WhyAttendSection className=" py-8" />
+        <WhyAttendSection className="py-8" />
         <WhoShouldAttendSection className="px-8 py-8" />
         {/* <div className="w-full py-8">
           <Marquee className="">

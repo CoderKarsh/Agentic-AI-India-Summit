@@ -26,12 +26,13 @@ export const DateAndLocation = () => {
 
       <div className="flex w-full mx-auto items-center gap-8 px-8 py-0 relative flex-[0_0_auto]">
         <div className="relative flex items-end justify-center flex-1">
-          <p className="ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] leading-12">
-            <span className="ff-inter font-medium text-[#111111] text-5xl tracking-[0] leading-12">
+          <p className="flex flex-col gap-0 ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] -leading-4">
+            <span className="ff-inter font-medium text-[#111111] text-3xl md:text-5xl tracking-[0] -leading-4">
               {locationData.venue}
-              <br />
             </span>
-            <span className="text-[32px] leading-8">{locationData.city}</span>
+            <span className="text-2xl md:text-3xl -leading-4">
+              {locationData.city}
+            </span>
           </p>
         </div>
 
@@ -43,12 +44,13 @@ export const DateAndLocation = () => {
         />
 
         <div className="relative flex items-end justify-center flex-1">
-          <p className="ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] leading-12">
-            <span className="ff-inter font-medium text-[#111111] text-5xl tracking-[0] leading-12">
+          <p className="flex flex-col gap-0 ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] -leading-4">
+            <span className="ff-inter font-medium text-[#111111] text-3xl md:text-5xl tracking-[0] -leading-4">
               {dateData.day}
-              <br />
             </span>
-            <span className="text-[32px] leading-8">{dateData.year}</span>
+            <span className="text-2xl md:text-3xl -leading-4">
+              {dateData.year}
+            </span>
           </p>
         </div>
       </div>
