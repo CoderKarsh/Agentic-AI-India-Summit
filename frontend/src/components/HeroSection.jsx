@@ -50,7 +50,7 @@ const HeroSection = ({ className = "", ...props }) => {
       {/* Heading */}
       <section className="flex  max-w-316 mx-auto flex-wrap lg:flex-nowrap items-end gap-8 px-8 lg:gap-28.75 w-full ">
         <motion.h1
-          className="flex items-baseline justify-start flex-wrap ff-inter font-normal text-[#111111] text-[64px] md:text-8xl leading-none"
+          className="flex items-baseline justify-start flex-wrap ff-inter font-normal text-[#111111] text-[64px] md:text-8xl leading-tight"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.8 }}
@@ -185,7 +185,7 @@ const HeroSection = ({ className = "", ...props }) => {
           </motion.div>
         </motion.h1>
       </section>
-      <motion.div
+      {/* <motion.div
         className="overflow-hidden  max-w-316 mx-auto  flex w-full px-8 flex-col gap-4 lg:flex-row lg:justify-between"
         variants={infoContainer}
         initial="hidden"
@@ -201,7 +201,7 @@ const HeroSection = ({ className = "", ...props }) => {
           </span>
           <span className="ff-inter italic">Autonomous Intelligence</span>
         </motion.p>
-      </motion.div>
+      </motion.div> */}
       {/* <motion.div className="ff-inter max-w-316 mx-auto text-base md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-8.25 flex flex-col lg:flex-row lg:w-[50%] lg:justify-between gap-0.5">
       </motion.div> */}
       <DateAndLocation />
