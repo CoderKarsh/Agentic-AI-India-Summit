@@ -70,7 +70,7 @@ export const SpeakersSection = () => {
                 <Card className="bg-transparent border-none shadow-none">
                   <CardContent className="p-0 flex flex-col gap-4">
                     <motion.div
-                      className="relative w-full aspect-square bg-white  overflow-hidden"
+                      className="relative w-full aspect-square bg-[#E88B58]  overflow-hidden"
                       variants={imgVariants}
                     >
                       <img
