@@ -26,7 +26,7 @@ export const SpeakersSection = () => {
 
   return (
     <motion.section
-      className="relative w-full overflow-hidden bg-[#D63500] py-16"
+      className="relative w-full overflow-hidden bg-[#E85D3C] border-y border-[var(--border-subtle)] py-16"
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -70,7 +70,7 @@ export const SpeakersSection = () => {
                 <Card className="bg-transparent border-none shadow-none">
                   <CardContent className="p-0 flex flex-col gap-4">
                     <motion.div
-                      className="relative w-full aspect-square bg-[#E88B58]  overflow-hidden"
+                      className="relative w-full aspect-square bg-[#E88B58] group-hover:shadow-lg overflow-hidden"
                       variants={imgVariants}
                     >
                       <img
@@ -81,10 +81,10 @@ export const SpeakersSection = () => {
                     </motion.div>
 
                     <motion.div className="flex flex-col gap-2 lg:gap-4">
-                      <h3 className="ff-inter font-semibold text-white text-base md:text-xl tracking-[-1.20px] leading-6">
+                      <h3 className="ff-inter font-semibold text-white group-hover:text-[#dddddd] text-base md:text-xl tracking-[-1.20px] leading-6 transition-colors duration-200">
                         {speaker.name}
                       </h3>
-                      <p className="ff-inter font-normal text-white opacity-80 hover:opacity-100 text-sm md:text-base tracking-[-0.80px] leading-[22.4px]">
+                      <p className="ff-inter font-normal text-white opacity-90 hover:opacity-100 transition-opacity text-sm md:text-base tracking-[-0.80px] leading-[22.4px]">
                         {speaker.title}
                         <br />
                         <span className=" mt-4"> {speaker.organization}</span>

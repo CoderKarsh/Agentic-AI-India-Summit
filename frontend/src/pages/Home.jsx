@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className="bg-[#f2f2f2] w-full relative">
+    <div className="bg-[var(--bg-primary)] w-full relative">
       <Header className="px-8" />
 
       <main className="w-full space-y-15">

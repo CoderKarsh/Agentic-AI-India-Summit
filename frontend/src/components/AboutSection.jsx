@@ -4,7 +4,7 @@ export const AboutSection = ({ className = "", ...props }) => {
   return (
     <motion.section
       id="about"
-      className={`relative w-full max-w-316 mx-auto bg-[#f2f2f2] ${className} grid grid-cols-1 place-content-center lg:grid-cols-2 gap-8 py-4`}
+      className={`relative w-full max-w-316 mx-auto bg-[var(--bg-primary)] ${className} grid grid-cols-1 place-content-center lg:grid-cols-2 gap-8 py-4`}
       {...props}
     >
       <div className="relative z-10 flex flex-col gap-6">

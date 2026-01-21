@@ -63,7 +63,7 @@ export const WhyAttendCards = ({ className = "", ...props }) => {
           variants={cardVariant}
         >
           <div
-            className={`relative bg-[#F64D15] rounded-xl shadow p-6 pt-10 h-full`}
+            className={`relative bg-[#F47458] rounded-xl shadow p-6 pt-10 h-full overflow-visible hover:bg-[#FF8A6E] hover:shadow-lg hover:-translate-y-1 transition-all duration-250 ease-out group`}
           >
             {/* keep decorative asset if present but hidden by default */}
             <img
@@ -75,7 +75,7 @@ export const WhyAttendCards = ({ className = "", ...props }) => {
 
             {/* centered icon circle */}
             <div
-              className={`absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center shadow-sm`}
+              className={`absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 ${card.iconBackground} rounded-full flex items-center justify-center shadow-sm group-hover:shadow-lg group-hover:scale-110 transition-all duration-250`}
             >
               <img src={card.iconImage} alt="icon" className="w-10 h-10" />
             </div>

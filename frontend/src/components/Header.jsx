@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 const navItems = [
   { label: "About", href: "/#about" },
   { label: "Speakers", href: "/#speakers" },
@@ -34,15 +35,19 @@ const Header = ({ className = "", ...props }) => {
 
   return (
     <header
-      className={`sticky top-0 z-50  w-full bg-[#f2f2f2] ${className} transition-shadow duration-200 ${
-        scrolled ? "shadow-[0_2px_8px_rgba(0,0,0,0.08)]" : "shadow-none"
-      }`}
+      className={`sticky top-0 z-50 w-full bg-[var(--bg-primary)] border-b border-[var(--border-subtle)] ${className} transition-shadow duration-200 ${scrolled ? "shadow-[var(--shadow-sm)]" : "shadow-none"
+        }`}
       {...props}
     >
       <nav className="relative flex max-w-300 items-center justify-between mx-auto py-4">
-        <a href="#home">
+        <motion.a
+          href="#home"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <img src="/Logo.svg" alt="" />
-        </a>
+        </motion.a>
 
         {/* desktop nav */}
         <div className="hidden md:inline-flex items-center justify-end gap-8">
@@ -64,7 +69,7 @@ const Header = ({ className = "", ...props }) => {
                         handleNavClick(e, item.href.replace("/", ""));
                         setOpen(false);
                       }}
-                      className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full hover: bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)]   hover:opacity-95 cursor-pointer"
+                      className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full bg-[image:var(--gradient-primary)] hover:bg-[image:var(--gradient-primary-hover)] transition-all duration-200 cursor-pointer shadow-md hover:shadow-lg hover:-translate-y-0.5"
                     >
                       {item.label}
                     </a>
@@ -79,7 +84,7 @@ const Header = ({ className = "", ...props }) => {
                       handleNavClick(e, item.href.replace("/", ""));
                       setOpen(false);
                     }}
-                    className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer gradient-underline"
+                    className="ff-inter font-light text-[var(--text-primary)] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-[var(--color-primary)] cursor-pointer gradient-underline"
                   >
                     {item.label}
                   </a>
@@ -97,7 +102,7 @@ const Header = ({ className = "", ...props }) => {
                     key={item.label}
                     to={item.href}
                     onClick={() => setOpen(false)}
-                    className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-95"
+                    className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full bg-[image:var(--gradient-primary)] hover:bg-[image:var(--gradient-primary-hover)] transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
                   >
                     {item.label}
                   </Link>
@@ -109,7 +114,7 @@ const Header = ({ className = "", ...props }) => {
                   key={item.label}
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red cursor-pointer gradient-underline"
+                  className="ff-inter font-light text-[var(--text-primary)] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-[var(--color-primary)] cursor-pointer gradient-underline"
                 >
                   {item.label}
                 </Link>
@@ -126,7 +131,7 @@ const Header = ({ className = "", ...props }) => {
                   key={item.label}
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] hover:opacity-95"
+                  className="ff-inter font-semibold text-white text-base whitespace-nowrap px-4 py-2 rounded-full bg-[image:var(--gradient-primary)] hover:bg-[image:var(--gradient-primary-hover)] transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
                 >
                   {item.label}
                 </Link>
@@ -138,7 +143,7 @@ const Header = ({ className = "", ...props }) => {
                 key={item.label}
                 to={item.href}
                 onClick={() => setOpen(false)}
-                className="ff-inter font-light text-[#111111] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-primary-red gradient-underline"
+                className="ff-inter font-light text-[var(--text-primary)] text-base tracking-[0] leading-[normal] whitespace-nowrap transition-colors hover:text-[var(--color-primary)] gradient-underline"
               >
                 {item.label}
               </Link>
@@ -203,7 +208,7 @@ const Header = ({ className = "", ...props }) => {
                           handleNavClick(e, item.href.replace("/", ""));
                           setOpen(false);
                         }}
-                        className="ff-inter text-white px-4 py-3 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] text-center mb-2"
+                        className="ff-inter text-white px-4 py-3 rounded-full bg-[image:var(--gradient-primary)] hover:bg-[image:var(--gradient-primary-hover)] transition-all duration-200 text-center mb-2 shadow-md hover:shadow-lg"
                       >
                         {item.label}
                       </a>
@@ -215,7 +220,7 @@ const Header = ({ className = "", ...props }) => {
                       key={item.label}
                       to={item.href}
                       onClick={() => setOpen(false)}
-                      className="ff-inter text-white px-4 py-3 rounded-full bg-[linear-gradient(228deg,rgba(232,139,88,1)_0%,rgba(227,88,119,1)_51%,rgba(225,57,62,1)_100%)] text-center mb-2"
+                      className="ff-inter text-white px-4 py-3 rounded-full bg-[image:var(--gradient-primary)] hover:bg-[image:var(--gradient-primary-hover)] transition-all duration-200 text-center mb-2 shadow-md hover:shadow-lg"
                     >
                       {item.label}
                     </Link>
@@ -232,7 +237,7 @@ const Header = ({ className = "", ...props }) => {
                           handleNavClick(e, item.href.replace("/", ""));
                           setOpen(false);
                         }}
-                        className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100 gradient-underline"
+                        className="ff-inter text-[var(--text-primary)] px-3 py-2 rounded hover:bg-[var(--bg-secondary)] gradient-underline"
                       >
                         {item.label}
                       </a>
@@ -244,7 +249,7 @@ const Header = ({ className = "", ...props }) => {
                       key={item.label}
                       to={item.href}
                       onClick={() => setOpen(false)}
-                      className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100 gradient-underline"
+                      className="ff-inter text-[var(--text-primary)] px-3 py-2 rounded hover:bg-[var(--bg-secondary)] gradient-underline"
                     >
                       {item.label}
                     </Link>
@@ -256,7 +261,7 @@ const Header = ({ className = "", ...props }) => {
                     key={item.label}
                     to={item.href}
                     onClick={() => setOpen(false)}
-                    className="ff-inter text-[#111111] px-3 py-2 rounded hover:bg-gray-100 gradient-underline"
+                    className="ff-inter text-[var(--text-primary)] px-3 py-2 rounded hover:bg-[var(--bg-secondary)] gradient-underline"
                   >
                     {item.label}
                   </Link>
