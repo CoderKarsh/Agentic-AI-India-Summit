@@ -1,5 +1,6 @@
 import containingLine from "../assets/containing-line.svg";
 import divider from "../assets/divider.svg";
+import { motion } from "framer-motion";
 
 export const DateAndLocation = () => {
   const locationData = {
@@ -10,6 +11,25 @@ export const DateAndLocation = () => {
   const dateData = {
     day: "19 June",
     year: "2026",
+  };
+
+  // Snappy slide-in animations
+  const slideFromLeft = {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
+    }
+  };
+
+  const slideFromRight = {
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: 0.1 }
+    }
   };
 
   return (
@@ -25,7 +45,13 @@ export const DateAndLocation = () => {
       />
 
       <div className="flex w-full mx-auto items-center gap-8 px-8 py-0 relative flex-[0_0_auto]">
-        <div className="relative flex items-end justify-center flex-1">
+        <motion.div
+          className="relative flex items-end justify-center flex-1"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={slideFromLeft}
+        >
           <p className="flex flex-col gap-0 ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] -leading-4">
             <span className="ff-inter font-medium text-[#111111] text-3xl md:text-5xl tracking-[0] -leading-4">
               {locationData.venue}
@@ -34,7 +60,7 @@ export const DateAndLocation = () => {
               {locationData.city}
             </span>
           </p>
-        </div>
+        </motion.div>
 
         <img
           className="relative w-0.75 h-34"
@@ -43,7 +69,13 @@ export const DateAndLocation = () => {
           role="presentation"
         />
 
-        <div className="relative flex items-end justify-center flex-1">
+        <motion.div
+          className="relative flex items-end justify-center flex-1"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={slideFromRight}
+        >
           <p className="flex flex-col gap-0 ff-inter font-medium text-[#111111] text-5xl text-center tracking-[0] -leading-4">
             <span className="ff-inter font-medium text-[#111111] text-3xl md:text-5xl tracking-[0] -leading-4">
               {dateData.day}
@@ -52,7 +84,7 @@ export const DateAndLocation = () => {
               {dateData.year}
             </span>
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <img

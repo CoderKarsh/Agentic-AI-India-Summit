@@ -125,7 +125,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
         >
           {themesData.map((theme, index) => (
             <motion.div key={index} variants={item}>
-              <Card className="h-[156px] bg-[#D63500] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0">
+              <Card className="h-[156px] bg-[#E85D3C] rounded-lg overflow-hidden shadow-[0px_4px_4px_#640f221a] border-0 hover:bg-[#F07456] hover:shadow-[0px_8px_16px_#640f2233] hover:-translate-y-1 transition-all duration-250 ease-out cursor-pointer">
                 <CardContent className="relative w-full h-full p-0">
                   <motion.div
                     className="flex w-full h-full items-center gap-2.5 absolute top-0 left-0"
@@ -134,13 +134,13 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
                     {Array.from({ length: 22 }).map((_, i) => (
                       <motion.div
                         key={i}
-                        className="flex-1 self-stretch bg-[#00000011]"
+                        className="flex-1 self-stretch bg-[#00000008]"
                         variants={stripe}
                       />
                     ))}
                   </motion.div>
 
-                  <div className="absolute top-5 left-1 ff-inter font-medium text-[#ff890b] text-9xl tracking-[0] leading-[211.2px] whitespace-nowrap overflow-hidden">
+                  <div className="absolute top-5 left-1 ff-inter font-medium text-[#FFA366] text-9xl tracking-[0] leading-[211.2px] whitespace-nowrap overflow-hidden">
                     <motion.div className="inline-block" variants={numberInner}>
                       {theme.number}
                     </motion.div>
@@ -159,7 +159,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
         </motion.div>
       </motion.div>
       {/* WHY ATTEND TEXT */}
-      <div className="bg-[#D63500] px-8 py-8 flex flex-col lg:flex-row justify-between gap-8 w-full items-center">
+      <div className="bg-[#E85D3C] px-8 py-8 flex flex-col lg:flex-row justify-between gap-8 w-full items-center">
         <motion.header
           className="max-w-316 mx-auto px-8 flex flex-col w-full items-start gap-6"
           variants={headerVariant}
@@ -184,7 +184,7 @@ export const WhyAttendSection = ({ className = "", ...props }) => {
       </div>
 
       {/* WHY ATTEND CARDS */}
-      <div className="w-full bg-[#D63500]">
+      <div className="w-full bg-[#E85D3C]">
         <WhyAttendCards className=" py-20" />
       </div>
       {/* <InsightsDialogueConnection /> */}

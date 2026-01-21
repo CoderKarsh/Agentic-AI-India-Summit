@@ -133,11 +133,11 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <header className="inline-flex flex-col items-start gap-4 relative flex-[0_0_auto]">
-        <h2 className="relative w-full max-w-[515px] mt-[-1.00px] ff-inter font-normal text-[#111111] text-5xl leading-12 tracking-[-1.6px]">
+        <h2 className="relative w-full max-w-[515px] mt-[-1.00px] ff-inter font-normal text-[var(--text-primary)] text-5xl leading-12 tracking-[-1.6px]">
           Future Systems Council
         </h2>
 
-        <p className="relative w-full max-w-[376px] ff-inter font-normal text-[#3d3d3d] text-base tracking-[0] leading-[26.4px]">
+        <p className="relative w-full max-w-[376px] ff-inter font-normal text-[var(--text-secondary)] text-base tracking-[0] leading-[26.4px]">
           Senior technologists shaping how agentic and autonomous AI systems are
           built, scaled, and governed.
         </p>
@@ -176,13 +176,13 @@ export const FutureSystemsCouncil = ({ className = "", ...props }) => {
             <motion.div key={index} variants={cardItem}>
               <Card className="flex flex-col w-full h-full max-w-[214px] border-0 shadow-none bg-transparent">
                 <CardContent className="flex w-full h-full flex-col gap-2 md:gap-4  p-0 ">
-                  <motion.h3 className="text-[#111111] relative mt-[-1.00px] ff-inter font-normal text-xl md:text-2xl tracking-[-1.20px] leading-6 overflow-hidden">
+                  <motion.h3 className="text-[var(--text-primary)] relative mt-[-1.00px] ff-inter font-normal text-xl md:text-2xl tracking-[-1.20px] leading-6 overflow-hidden">
                     <motion.span className="inline-block" variants={reveal}>
                       {member.name}
                     </motion.span>
                   </motion.h3>
 
-                  <motion.div className="text-[#111111] relative ff-inter font-normal text-sm md:text-base tracking-[-0.80px] leading-[22.4px] overflow-hidden">
+                  <motion.div className="text-[var(--text-secondary)] relative ff-inter font-normal text-sm md:text-base tracking-[-0.80px] leading-[22.4px] overflow-hidden">
                     <motion.span className="inline-block" variants={reveal}>
                       {member.title}
                     </motion.span>
